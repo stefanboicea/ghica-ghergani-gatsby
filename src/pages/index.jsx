@@ -481,7 +481,7 @@ class Index extends Component {
 														<img src="images/causes-post-image/post-1.jpg" alt="Post Image" />
 														<figcaption>
 															<div className="caption-txt">
-																<span className="donated">66% Donated</span>
+																<span className="donated">10% Donated</span>
 																<span className="to-go">/ $10,014 To Go</span>
 															</div>
 
@@ -1113,7 +1113,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    posts: allPrismicPost(sort: { fields: [data___date], order: DESC }) {
+    posts: allPrismicPost(limit: 4, sort: { fields: [data___date], order: DESC }) {
       edges {
         node {
           uid
