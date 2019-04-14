@@ -10,8 +10,9 @@ export default class Categories extends Component {
       <>
         {categories.map((cat, i) => (
           <React.Fragment key={cat}>
-            {!!i && ', '}
+            <li>
             <Link to={`/categories/${kebabCase(cat)}`}>{cat}</Link>
+            </li>
           </React.Fragment>
         ))}
       </>
