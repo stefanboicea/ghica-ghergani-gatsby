@@ -4,85 +4,56 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Global, css } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
 import '@reach/skip-nav/styles.css'
 
 import Footer from './Footer'
 import SEO from './SEO'
-import SkipNavLink from './SkipNavLink'
-import { theme, reset } from '../styles'
 
-import 'typeface-lora'
-import 'typeface-source-sans-pro'
 
-const globalStyle = css`
-  ${reset}
-  h1, h2, h3, h4, h5, h6 {
-    color: ${theme.colors.black};
-  }
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    color: ${theme.colors.greyDarker};
-    background-color: ${theme.colors.bg};
-  }
-  ::selection {
-    color: ${theme.colors.bg};
-    background-color: ${theme.colors.primary};
-  }
-  a {
-    color: ${theme.colors.primary};
-    transition: all 0.4s ease-in-out;
-    text-decoration: none;
-    font-weight: 700;
-    font-style: italic;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-  @media (max-width: ${theme.breakpoints.m}) {
-    html {
-      font-size: 16px !important;
-    }
-  }
-  @media (max-width: ${theme.breakpoints.s}) {
-    h1 {
-      font-size: 2.369rem !important;
-    }
-    h2 {
-      font-size: 1.777rem !important;
-    }
-    h3 {
-      font-size: 1.333rem !important;
-    }
-    h4 {
-      font-size: 1rem !important;
-    }
-    h5 {
-      font-size: 0.75rem !important;
-    }
-    h6 {
-      font-size: 0.563rem !important;
-    }
-  }
-`
+
 
 const PureLayout = ({ children, data, customSEO }) => (
-  <ThemeProvider theme={theme}>
     <>
-      <Global styles={globalStyle} />
-      <SkipNavLink />
       {!customSEO && <SEO />}
+      <React.Fragment>
+				<div className="main-menu-container navbar-fixed-top">
+					<div id="main-menu" className="navbar navbar-default blog-page" role="navigation">
+						<div className="container">
+							<div className="navbar-header">
+								<button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span className="sr-only">Toggle navigation</span>
+									<i className="fa fa-bars"></i>
+								</button>
+								<h1>
+									<a className="navbar-brand" href="index.html">
+										<img className="logo" src="assets/images/logo.png" alt="Logo" rel="hoome" />
+									</a>
+								</h1>
+							</div>
+
+							<nav className="collapse navbar-collapse">
+								<a href="#donate" className="donate pull-right">Donează <i className="fa fa-heart"></i></a>
+								<ul id="headernavigation" className="nav navbar-nav pull-right">
+									<li><a className="page-scroll active" href="#top-section">Acasa</a></li>
+									<li><a className="page-scroll" href="#about">Despre</a></li>
+									<li><a className="page-scroll" href="#team">Echipa</a></li>
+									<li><a className="page-scroll" href="#service">Servicii</a></li>
+									{/* <Link hash={`gallery`} activeClassName="page-scroll">Galerie</Link> */}
+									<li><a className="page-scroll" href="#news">Blog</a></li>
+									<li><a className="page-scroll" href="#upcoming-events">Evenimente</a></li>
+									<li><a className="page-scroll" href="#contact">Contact</a></li>
+
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+      </React.Fragment>
       {children}
-      <Footer>
+      {/* <Footer>
         <div dangerouslySetInnerHTML={{ __html: data.prismicHomepage.data.footer.html }} />
-      </Footer>
+      </Footer> */}
     </>
-  </ThemeProvider>
 )
 
 class Layout extends Component {
