@@ -1,4 +1,12 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
+export default class EventsSection extends Component {
+	render() {
+		const { data } = this.props
+		return (
+			<React.Fragment>
 				{/*Upcoming Events Section */}
 				<section id="upcoming-events">
 					<div className="upcoming-events-section gray-bg angular section-padding">
@@ -113,7 +121,17 @@
 								</div>{/*/.com-md-8 */}
 							</div>
 						</div>
-						<div className="bottom-angle"></div>
+						{/* <div className="bottom-angle"></div> */}
 					</div>{/*/.upcoming-events-section */}
 				</section>{/*/.upcoming-events */}
 				{/*Upcoming Events Section End*/}
+
+			</React.Fragment>
+		)
+	}
+}
+
+EventsSection.propTypes = {
+	data: PropTypes.any.isRequired
+}
+

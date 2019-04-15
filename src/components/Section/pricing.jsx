@@ -25,6 +25,6 @@ export default class PricingSection extends Component {
 }
 
 PricingSection.propTypes = {
-    data: PropTypes.any.isRequired
+    data: PropTypes.any
 }
 

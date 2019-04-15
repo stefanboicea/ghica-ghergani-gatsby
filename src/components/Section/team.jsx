@@ -3,18 +3,23 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 export default class TeamSection extends Component {
-    render() {
-        const { data } = this.props
-        return (
-            <React.Fragment>
-               	{/*Team Section */}
+	render() {
+		const { data } = this.props
+		return (
+			<React.Fragment>
+				{/*Team Section */}
 				<section id="team">
 					<div className="team-section">
 						<div className="white-bg angular section-padding">
 							<div className="top-angle">
 							</div>{/*/.top-angle */}
-							<div className="container"> 
-							<SimpleSection data={sectiuni.edges[3].node.data}></SimpleSection>
+							<div className="container">
+								<div className="section-head">
+									<h2 className="section-title">{data.title}</h2>
+									<p className="section-description">
+										{data.subtitle}
+									</p>
+								</div>
 
 								<div id="team-slider" className="owl-carousel owl-theme">
 									<div className="item">
@@ -103,12 +108,12 @@ export default class TeamSection extends Component {
 					</div>{/*/.team-section */}
 				</section>{/*/#team*/}
 				{/*Team Section End */}
-            </React.Fragment>
-        )
-    }
+			</React.Fragment>
+		)
+	}
 }
 
 TeamSection.propTypes = {
-    data: PropTypes.any.isRequired
+	data: PropTypes.any.isRequired
 }
 

@@ -8,9 +8,9 @@ export default class SimpleSection extends Component {
         return (
             <React.Fragment>
                 <div className="section-head">
-                    <h2 className="section-title">{data.titlu.text}</h2>
+                    <h2 className="section-title">{data.titlu}</h2>
                     <p className="section-description">
-                        {data.subtitlu.text}
+                        {data.subtitlu}
 							</p>
                 </div>
             </React.Fragment>

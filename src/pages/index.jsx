@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { SimpleSection, CarouselSection, ImageSection, IframeSection, Gallery, GalleryItem, } from '../components/Section';
+import { TopSection, AboutSection, AboutParalaxSection, CausesSection, TestimonalSection, EventsSection, PricingSection, ServiceSection, VolunteerSection, NewsSection, GalleryItem, Gallery, ClientsSection, ContactSection, TeamSection } from '../components/Section';
 
 class Index extends Component {
 	render() {
 		const {
-			data: { homepage, posts, projects, sectiuni, elementegalerie },
+			data: { homepage, topSection, aboutSection, aboutParalaxSection, teamSection, volunteerSection, servicesSection, causesSection, eventsSection, testimonialSection, posts, elementegalerie },
 		} = this.props
+		console.log(teamSection.data)
 		return (
 			<React.Fragment>
 				<div className="main-menu-container navbar-fixed-top">
@@ -43,45 +44,61 @@ class Index extends Component {
 					</div>
 				</div>
 
-				{/* top section */}
+				{homepage.data.show_top_section === 'yes' &&
+					<TopSection data={topSection.data} ></TopSection>
+				}
 
-				{/* about section */}
+				{homepage.data.show_about_section === 'yes' &&
+					<AboutSection data={aboutSection.data}></AboutSection>
+				}
 
-				{/* about paralax */}
+				{homepage.data.show_about_paralax_section === 'yes' &&
+					<AboutParalaxSection data={aboutParalaxSection.data}></AboutParalaxSection>
+				}
 
+				{homepage.data.show_team_section === 'yes' &&
+					<TeamSection data={teamSection.data}></TeamSection>
+				}
 
-				{/* team section */}
+				{homepage.data.show_volunteer_section === 'yes' &&
+					<VolunteerSection data={volunteerSection.data}></VolunteerSection>
+				}
 
-				{/* volunteer */}
+				{homepage.data.show_services_section === 'yes' &&
+					<ServiceSection data={servicesSection.data}></ServiceSection>
+				}
 
-				{/* services */}
+				{homepage.data.show_pricing_section === 'yes' &&
+					<PricingSection></PricingSection>
+				}
 
-				{/* pricing */}
+				{homepage.data.show_testimonials_section === 'yes' &&
+					<TestimonalSection data={testimonialSection}></TestimonalSection>
+				}
 
-				{/* testimonial */}
+				{homepage.data.show_gallery_section === 'yes' &&
+					<Gallery items={elementegalerie.edges}></Gallery>
+				}
 
+				{homepage.data.show_causes_section === 'yes' &&
+					<CausesSection data={causesSection}></CausesSection>
+				}
 
-				<Gallery items={elementegalerie.edges}></Gallery>
+				{homepage.data.show_news_section === 'yes' &&
+					<NewsSection data={posts}></NewsSection>
+				}
 
-				{/* causes */}
+				{homepage.data.show_events_section === 'yes' &&
+					<EventsSection data={eventsSection}></EventsSection>
+				}
 
+				{/* {homepage.data.show_clients_section === 'yes' &&
+					<ClientsSection data={null}></ClientsSection>
+				} */}
 
-				{/* news */}
-
-
-				{/* events */}
-
-
-				{/* clients */}
-		
-				{/* contact */}
-
-
-
-		
-
-
-
+				{homepage.data.show_contact_section === 'yes' &&
+					<ContactSection data={null}></ContactSection>
+				}
 
 				{/*Google Map Section */}
 				<div id="google-map">
@@ -140,23 +157,150 @@ export default Index
 Index.propTypes = {
 	data: PropTypes.shape({
 		posts: PropTypes.object.isRequired,
-		sectiuni: PropTypes.object.isRequired,
 		elementegalerie: PropTypes.object.isRequired
 	}).isRequired,
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    homepage: prismicHomepage {
-      data {
-        title {
-          text
-        }
-        content {
-          html
-        }
-      }
-    }
+		homepage: prismicHomepage {
+			data {
+				title {
+					text
+				}
+				content {
+					html
+				}
+				show_top_section
+				show_team_section
+				show_about_section
+				show_about_paralax_section
+				show_volunteer_section
+				show_services_section
+				show_testimonails_section
+				show_gallery_section
+				show_causes_section
+				show_news_section
+				show_news_section
+				show_events_section
+				show_partners_section
+				show_contact_section
+				show_maps_section
+			}
+		}
+		topSection: prismicTopsection {
+			data {
+				carousel {
+					toptext
+					middletext
+					buttomtext
+				}
+			}
+		}
+		aboutSection: prismicAboutsection {
+			data {
+				title
+				subtitle
+				carouseltitle
+				carouselsubtitle
+				carouseldescription
+				carousel {
+					image {
+						url
+					}
+				}
+				iframetitle
+				iframesubtitle
+				iframedescription
+				iframelink {
+					url
+				}
+			}
+		}
+		aboutParalaxSection: prismicAboutparalaxsection {
+			data {
+				title
+				subtitle
+				donationpercent
+				donationtotal
+				donationlink {
+					url
+				}
+			}
+		}
+		teamSection: prismicTeamsection {
+			data {
+				title
+				subtitle
+				teammembers {
+					name
+					role
+					description
+					avatar {
+						url
+					}
+				}
+			}
+		}
+		volunteerSection: prismicVolunteersection {
+			data {
+				title
+				subtitle
+				description
+				image {
+					url
+				}
+			}
+		}
+		servicesSection: prismicServicessection {
+			data {
+				title
+				subtitle
+				services {
+					name
+					description
+				}
+			}
+		}
+		causesSection: prismicCausessection {
+			data {
+				title
+				subtitle
+				causes {
+					title
+					description
+					donationpercent
+					donationlimit
+					image {
+						url
+					}
+				}
+			}
+		}
+		eventsSection: prismicEventssection {
+			data {
+				title
+				subtitle
+				events {
+					title
+					place
+					time
+					image {
+						url
+					}
+				}
+			}
+		}
+		testimonialSection: prismicTestimonialssection {
+			data {
+				testimonials {
+					name
+					avatar {
+						url
+					}
+				}
+			}
+		}
     posts: allPrismicPost(limit: 4, sort: { fields: [data___date], order: DESC }) {
       edges {
         node {
@@ -178,41 +322,7 @@ export const pageQuery = graphql`
           }
         }
       }
-    }
-    projects: allPrismicProjectsBodyLinkItem {
-      edges {
-        node {
-          primary {
-            label {
-              text
-            }
-            link {
-              url
-            }
-          }
-        }
-      }
-    }
-    sectiuni: allPrismicSectiune (sort: { fields: [data___ordine], order: ASC }){
-      edges {
-      node {
-        uid
-        data {
-				tip
-        ordine 
-        titlu {
-          text
-        }
-        subtitlu {
-          text
-        }
-        descriere {
-          text
-        }
-        }
-      }
-      }
-    }
+		}
     elementegalerie:allPrismicGalerieElement {
       edges {
       node {

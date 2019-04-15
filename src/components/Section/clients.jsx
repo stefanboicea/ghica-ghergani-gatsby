@@ -64,6 +64,6 @@ export default class ClientsSection extends Component {
 }
 
 ClientsSection.propTypes = {
-    data: PropTypes.any.isRequired
+    data: PropTypes.any
 }
 

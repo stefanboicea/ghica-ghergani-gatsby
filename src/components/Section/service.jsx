@@ -15,10 +15,10 @@ export default class ServiceSection extends Component {
 						<div className="container">
 							<div className="section-head">
 								<h2 className="section-title">
-									Services
+									{data.title}
 						</h2>
 								<p className="section-description">
-									ALL OF OUR SERVICES IS CENTRALIZED TO THE WELFARE OF THE CHILDREN. WE SERVE THE CHILD WITH FOOD, EDUCATION, HABITATION, SAFETY AND EVERYTHING THE NEED.
+								{data.subtitle}
 						</p>
 							</div>{/*/.section-head */}
 

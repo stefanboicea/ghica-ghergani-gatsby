@@ -23,10 +23,10 @@ export default class Gallery extends Component {
                         <div className="container">
                             <div className="section-head">
                                 <h2 className="section-title">
-                                    Gallery
+                                    Galerie
 						</h2>{/*/.section-title */}
                                 <p className="section-description">
-                                    TAKE A LOOK AT OUR GALLERY TO SEE HOW WE ENDANGER THE CHILD. YOU MAY ALSO SEE OUR WORLDWIDE ACTIVITY AROUND THE GLOBE HOW WE WORKING FOR CHILDREN.
+                                    Descriere galerie
 						</p>
                             </div>{/*/.section-head */}
 
@@ -34,16 +34,16 @@ export default class Gallery extends Component {
                                 <div className="galleryFilter">
                                     <a href="#" data-filter="" className="current">Toate</a>
                                     {tagList.map(tag => {
-                                            const filter = '.' + tag
-                                            return <a href="#" key={filter} data-filter={filter}>{tag}</a>
-                                        })}
+                                        const filter = '.' + tag
+                                        return <a href="#" key={filter} data-filter={filter}>{tag}</a>
+                                    })}
                                 </div> {/*/.galleryFilter */}
 
 
                                 <div className="gallery-item element-from-bottom">
-                                        {items.map(item => {
-                                            return <GalleryItem key={item.node.id} item={item.node}></GalleryItem>
-                                        })}
+                                    {items.map(item => {
+                                        return <GalleryItem key={item.node.id} item={item.node}></GalleryItem>
+                                    })}
                                 </div>{/*/.gallery-item */}
                             </div>{/*/gallery-container */}
                         </div>

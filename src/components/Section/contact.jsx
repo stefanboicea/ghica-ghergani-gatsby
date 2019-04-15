@@ -107,7 +107,7 @@ export default class ContactSection extends Component {
 }
 
 ContactSection.propTypes = {
-    data: PropTypes.any.isRequired
+    data: PropTypes.any
 }
 
 
