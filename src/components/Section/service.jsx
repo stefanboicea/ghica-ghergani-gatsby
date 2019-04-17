@@ -3,11 +3,40 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 export default class ServiceSection extends Component {
-    render() {
-        const { data } = this.props
-        return (
-            <React.Fragment>
-               {/*Services Section */}
+	render() {
+		const { data } = this.props
+		console.log(data)
+		let items = []
+		let itemsli = []
+		for (const [index, item] of data.services.entries()) {
+			items.push(
+				<div className="col-md-4 from-bottom delay-200" key={index}>
+					<div className="service-box">
+						<div className="hex service-icon-hex">
+							<div className="service-icon">
+								<span aria-hidden="true" className="li_star"></span>
+							</div>{/*/.service-icon */}
+						</div>{/*/.hex */}
+						<h3 className="service-title content-title">
+							{item.name}
+									</h3>{/*/.service-title content-title */}
+						<p className="service-description">
+							{item.description}
+									</p>{/*/.service-description */}
+
+						<div className="services-button">
+							<a href="#" className="btn custom-btn angle-effect">
+								Learn More
+										</a>
+						</div>{/*/.services-button */}
+					</div>{/*/.service-box */}
+				</div>
+			)
+		}
+
+		return (
+			<React.Fragment>
+				{/*Services Section */}
 				<section id="service">
 					<div className="services-section white-bg angular section-padding">
 						<div className="top-angle">
@@ -16,35 +45,15 @@ export default class ServiceSection extends Component {
 							<div className="section-head">
 								<h2 className="section-title">
 									{data.title}
-						</h2>
+								</h2>
 								<p className="section-description">
-								{data.subtitle}
-						</p>
+									{data.subtitle}
+								</p>
 							</div>{/*/.section-head */}
 
 							<div className="section-content">
 								<div className="row">
-									<div className="col-md-4 from-bottom delay-200">
-										<div className="service-box">
-											<div className="hex service-icon-hex">
-												<div className="service-icon">
-													<span aria-hidden="true" className="li_star"></span>
-												</div>{/*/.service-icon */}
-											</div>{/*/.hex */}
-											<h3 className="service-title content-title">
-												Fund Raising
-									</h3>{/*/.service-title content-title */}
-											<p className="service-description">
-												We raise funds for the oppressed and affected child all over the world. We collect donation aiming to help the children and keep them safe.
-									</p>{/*/.service-description */}
 
-											<div className="services-button">
-												<a href="#" className="btn custom-btn angle-effect">
-													Learn More
-										</a>
-											</div>{/*/.services-button */}
-										</div>{/*/.service-box */}
-									</div>{/*/.col-md-4 */}
 
 									<div className="col-md-4 from-bottom delay-600">
 										<div className="service-box">
@@ -94,12 +103,12 @@ export default class ServiceSection extends Component {
 						</div>{/*/.container*/}
 					</div>{/*/.services-section */}
 				</section>
-            </React.Fragment>
-        )
-    }
+			</React.Fragment>
+		)
+	}
 }
 
 ServiceSection.propTypes = {
-    data: PropTypes.any.isRequired
+	data: PropTypes.any.isRequired
 }
 

@@ -3,11 +3,53 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 export default class CausesSection extends Component {
-    render() {
-        const { data } = this.props
-        return (
-            <React.Fragment>
-               				{/*Causes Section*/}
+	render() {
+		const { data } = this.props
+		console.log(data)
+		let items = []
+		let itemsli = []
+		for (const [index, item] of data.causes.entries()) {
+			let className = 'item'
+			let classNameLi = ''
+			if (index === 0) {
+				className = 'item active'
+				classNameLi = 'active'
+			}
+
+			items.push(
+				<div className="item col-md-12" key={index}>
+					<div className="causes-post">
+						<figure>
+							<img src={item.image.url} />
+							<figcaption>
+								<div className="caption-txt">
+									<span className="donated">{item.donationpercent}% donat </span>
+									<span className="to-go">/ inca {item.donationlimit} </span>
+								</div>
+
+								<div className="progress">
+									<div id="causes-progress-1" className="progress-bar custom-progress-bar" role="progressbar" aria-valuenow={item.donationpercent} aria-valuemin="0" aria-valuemax="100">
+										<span className="sr-only">{item.donationpercent}% complet</span>
+									</div>
+								</div>{/*/.progress */}
+							</figcaption>
+						</figure>
+						<h3 className="causes-post-title">
+							{item.title}
+			</h3>{/*/.causes-post-title */}
+						<p className="post-text">
+						{item.description}
+			</p>{/*/.post-text */}
+						<a className="btn donate-btn" href="#">
+							Doneaza
+			</a>
+					</div>{/*/.causes-post */}
+				</div>
+			)
+		}
+		return (
+			<React.Fragment>
+				{/*Causes Section*/}
 				<section id="causes">
 					<div className="causes-section gray-bg  angular section-padding">
 						<div className="top-angle">
@@ -22,10 +64,10 @@ export default class CausesSection extends Component {
 											</div>
 										</div>
 										<h3 className="content-title">
-											Our Causes
+											{data.title}
 								</h3>
 										<p className="content-description">
-											We have a fixed plan to improve the child world. Moreover, we are careful about the sudden disaster and harmful environment.
+											{data.subtitle}
 								</p>
 										<div className="slide-nav-container">
 											<a className="slide-nav left slide-left" href="#causes-post-slider" data-slide="prev"><i className="fa fa-chevron-left"></i></a>
@@ -37,121 +79,7 @@ export default class CausesSection extends Component {
 								<div className="col-md-8">
 									<div className="row">
 										<div id="causes-post-slider" className="owl-carousel owl-theme">
-											<div className="item col-md-12">
-												<div className="causes-post">
-													<figure>
-														<img src="images/causes-post-image/post-1.jpg" alt="Post Image" />
-														<figcaption>
-															<div className="caption-txt">
-																<span className="donated">10% Donated</span>
-																<span className="to-go">/ $10,014 To Go</span>
-															</div>
-
-															<div className="progress">
-																<div id="causes-progress-1" className="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-																	<span className="sr-only">60% Complete (warning)</span>
-																</div>
-															</div>{/*/.progress */}
-														</figcaption>
-													</figure>
-													<h3 className="causes-post-title">
-														the causes title goes here
-											</h3>{/*/.causes-post-title */}
-													<p className="post-text">
-														Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
-											</p>{/*/.post-text */}
-													<a className="btn donate-btn" href="#">
-														Donate Now
-											</a>
-												</div>{/*/.causes-post */}
-											</div>{/*/.item col-md-12 */}
-
-											<div className="item col-md-12">
-												<div className="causes-post">
-													<figure>
-														<img src="images/causes-post-image/post-2.jpg" alt="Post Image" />
-														<figcaption>
-															<div className="caption-txt">
-																<span className="donated">66% Donated</span>
-																<span className="to-go">/ $10,014 To Go</span>
-															</div>
-
-															<div className="progress">
-																<div id="causes-progress-2" className="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-																	<span className="sr-only">60% Complete (warning)</span>
-																</div>
-															</div>{/*/.progress */}
-														</figcaption>
-													</figure>
-													<h3 className="causes-post-title">
-														the causes title goes here
-											</h3>{/*/.causes-post-title */}
-													<p className="post-text">
-														Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
-											</p>{/*/.post-text */}
-													<a className="btn donate-btn" href="#">
-														Donate Now
-											</a>
-												</div>{/*/.causes-post */}
-											</div>{/*/.item col-md-12 */}
-											<div className="item col-md-12">
-												<div className="causes-post">
-													<figure>
-														<img src="images/causes-post-image/post-3.jpg" alt="Post Image" />
-														<figcaption>
-															<div className="caption-txt">
-																<span className="donated">66% Donated</span>
-																<span className="to-go">/ $10,014 To Go</span>
-															</div>
-
-															<div className="progress">
-																<div id="causes-progress-3" className="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-																	<span className="sr-only">60% Complete (warning)</span>
-																</div>
-															</div>{/*/.progress */}
-														</figcaption>
-													</figure>
-													<h3 className="causes-post-title">
-														the causes title goes here
-											</h3>{/*/.causes-post-title */}
-													<p className="post-text">
-														Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
-											</p>{/*/.post-text */}
-													<a className="btn donate-btn" href="#">
-														Donate Now
-											</a>
-												</div>{/*/.causes-post */}
-											</div>{/*/.item col-md-12 */}
-
-											<div className="item col-md-12">
-												<div className="causes-post">
-													<figure>
-														<img src="images/causes-post-image/post-4.jpg" alt="Post Image" />
-														<figcaption>
-															<div className="caption-txt">
-																<span className="donated">66% Donated</span>
-																<span className="to-go">/ $10,014 To Go</span>
-															</div>
-
-															<div className="progress">
-																<div id="causes-progress-4" className="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-																	<span className="sr-only">60% Complete (warning)</span>
-																</div>
-															</div>{/*/.progress */}
-														</figcaption>
-													</figure>
-													<h3 className="causes-post-title">
-														the causes title goes here
-											</h3>{/*/.causes-post-title */}
-													<p className="post-text">
-														Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
-											</p>{/*/.post-text */}
-													<a className="btn donate-btn" href="#">
-														Donate Now
-											</a>
-												</div>{/*/.causes-post */}
-											</div>{/*/.item col-md-12 */}
-
+											{items}
 										</div>{/*/.causes-post-slider */}
 									</div>{/*/row */}
 								</div>{/*/.col-md-8 */}
@@ -162,12 +90,12 @@ export default class CausesSection extends Component {
 				</section>{/*/#causes */}
 				{/*Causes Section End*/}
 
-            </React.Fragment>
-        )
-    }
+			</React.Fragment>
+		)
+	}
 }
 
 CausesSection.propTypes = {
-    data: PropTypes.any.isRequired
+	data: PropTypes.any.isRequired
 }
 

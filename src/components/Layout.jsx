@@ -34,8 +34,8 @@ const PureLayout = ({ children, data, customSEO }) => (
 							<nav className="collapse navbar-collapse">
 								<a href="#donate" className="donate pull-right">Donează <i className="fa fa-heart"></i></a>
 								<ul id="headernavigation" className="nav navbar-nav pull-right">
-									<li><a className="page-scroll active" href="#top-section">Acasa</a></li>
-									<li><a className="page-scroll" href="#about">Despre</a></li>
+									<li><a className="page-scroll active" href="/#top-section">Acasa</a></li>
+									<li><a className="page-scroll" href="/#about">Despre</a></li>
 									<li><a className="page-scroll" href="#team">Echipa</a></li>
 									<li><a className="page-scroll" href="#service">Servicii</a></li>
 									{/* <Link hash={`gallery`} activeClassName="page-scroll">Galerie</Link> */}

@@ -1,11 +1,32 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
 export default class TopSection extends Component {
     render() {
         const { data } = this.props
-        console.log(data)
+        let items = []
+        for (const [index, item] of data.carousel.entries()) {
+            let className = 'item';
+            if(index === 0) {
+                className = 'item active';
+            }
+          items.push(
+            <div className={className} key={item.toptext}>
+            <h2 className="thin-txt">
+                {item.toptext}
+            </h2>
+            <p className="bold-txt">
+                {item.middletext}
+            </p>
+            <p className="thin-txt">
+                {item.buttomtext}
+            </p>
+            <p className="link">
+                <a href="#" className="btn custom-btn angle-effect">Află mai multe</a>
+            </p>
+        </div>
+          )
+        }
         return (
             <React.Fragment>
                 <section id="top-section">
@@ -15,44 +36,13 @@ export default class TopSection extends Component {
                                 <div id="top-carousel" className="carousel slide" data-ride="carousel">
 
                                     <ol className="carousel-indicators">
-                                        <li data-target="#top-carousel" data-slide-to="0" className="active"></li>
+                                        {/* <li data-target="#top-carousel" data-slide-to="0" className="active"></li>
                                         <li data-target="#top-carousel" data-slide-to="1"></li>
-                                        <li data-target="#top-carousel" data-slide-to="2"></li>
+                                        <li data-target="#top-carousel" data-slide-to="2"></li> */}
                                     </ol>
                                     <div className="carousel-inner">
-                                    <div className="item active" >
-                                                    <h2 className="thin-txt">
-                                                        Primul
-                                                    </h2>
-                                                    <p className="bold-txt">
-                                                        Da
-                                                    </p>
-                                                    <p className="thin-txt">
-                                                        Da
-                                                    </p>
-                                                    <p className="link">
-                                                        <a href="#" className="btn custom-btn angle-effect">Află mai multe</a>
-                                                    </p>
-                                                </div>
 
-                                        {data.carousel.map(item => {
-                                            return (
-                                                <div className="item" key={item.toptext}>
-                                                    <h2 className="thin-txt">
-                                                        {item.toptext}
-                                                    </h2>
-                                                    <p className="bold-txt">
-                                                        {item.middletext}
-                                                    </p>
-                                                    <p className="thin-txt">
-                                                        {item.buttomtext}
-                                                    </p>
-                                                    <p className="link">
-                                                        <a href="#" className="btn custom-btn angle-effect">Află mai multe</a>
-                                                    </p>
-                                                </div>
-                                            )
-                                        })}
+                                        {items}
 
                                     </div>
                                     <a className="slide-nav left" href="#top-carousel" data-slide="prev"><span></span></a>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
 export default class AboutParalaxSection extends Component {
     render() { 
-        const { data } = this.props
+		const { data } = this.props
+		console.log(data)
         return (
             <React.Fragment>
                	<section id="about-parallax">
@@ -16,7 +16,7 @@ export default class AboutParalaxSection extends Component {
 						</h3>
 								<p className="parallax-description">
 								{data.subtitle} <br />
-									<span className="amount">${data.donationtotal}</span> până acum!
+									<span className="amount">{data.donationtotal}</span> 
 						</p>
 								<div className="progress-bar-container">
 									<div className="progress">

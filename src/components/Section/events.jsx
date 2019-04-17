@@ -5,6 +5,30 @@ import { Link } from 'gatsby'
 export default class EventsSection extends Component {
 	render() {
 		const { data } = this.props
+		console.log(data)
+        let items = []
+        for (const [index, item] of data.events.entries()) {
+            items.push(
+				<div className="item col-md-12" key={index}>
+				<div className="event-content">
+					<h4 className="content-title">
+						<a href="#">{item.title}</a>
+					</h4>{/*/.event-title */}
+					<div className="event-date-time-place">
+						<time dateTime="2014-06-30">
+							<span><i className="fa fa-clock-o"></i></span> {item.time}
+				</time>
+
+						<span><i className="fa fa-map-marker"></i></span> Locatie: {item.place}
+			</div>
+					<div className="event-img">
+						<img src="images/event-post-image/post-1.jpg" alt="Event Post" />
+					</div>{/*/.event-img */}
+				</div>{/*/.event-content  */}
+			</div>
+            )
+		}
+		
 		return (
 			<React.Fragment>
 				{/*Upcoming Events Section */}
@@ -23,10 +47,10 @@ export default class EventsSection extends Component {
 											</div>{/*/.content-icon */}
 										</div>{/*/.content-icon-hex */}
 										<h3 className="content-title">
-											Upcoming Event
+											{data.title}
 								</h3>
 										<p className="content-description">
-											We create events aiming to spear the voice for children and gather for support. Please update with our events and confirm your presence.
+											{data.subtitle}
 								</p>
 									</div>
 
@@ -41,78 +65,8 @@ export default class EventsSection extends Component {
 										<div className="event-container">
 											<div id="event-post-slider" className="owl-carousel owl-theme">
 
-												<div className="item col-md-12">
-													<div className="event-content">
-														<h4 className="content-title">
-															<a href="#">Event Title Goes Here</a>
-														</h4>{/*/.event-title */}
-														<div className="event-date-time-place">
-															<time dateTime="2014-06-30">
-																<span><i className="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
-													</time>
-
-															<span><i className="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
-												</div>
-														<div className="event-img">
-															<img src="images/event-post-image/post-1.jpg" alt="Event Post" />
-														</div>{/*/.event-img */}
-													</div>{/*/.event-content  */}
-												</div>{/*/.item col-md-12 */}
-
-												<div className="item col-md-12">
-													<div className="event-content">
-														<h4 className="content-title">
-															<a href="#">Event Title Goes Here</a>
-														</h4>{/*/.event-title */}
-														<div className="event-date-time-place">
-															<time dateTime="2014-06-30">
-																<span><i className="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
-													</time>
-
-															<span><i className="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
-												</div>
-														<div className="event-img">
-															<img src="images/event-post-image/post-2.jpg" alt="Event Post" />
-														</div>{/*/.event-img */}
-													</div>{/*/.event-content  */}
-												</div>{/*/.item col-md-12 */}
-
-												<div className="item col-md-12">
-													<div className="event-content">
-														<h4 className="content-title">
-															<a href="#">Event Title Goes Here</a>
-														</h4>{/*/.event-title */}
-														<div className="event-date-time-place">
-															<time dateTime="2014-06-30">
-																<span><i className="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
-													</time>
-
-															<span><i className="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
-												</div>
-														<div className="event-img">
-															<img src="images/event-post-image/post-3.jpg" alt="Event Post" />
-														</div>{/*/.event-img */}
-													</div>{/*/.event-content  */}
-												</div>{/*/.item col-md-12 */}
-
-												<div className="item col-md-12">
-													<div className="event-content">
-														<h4 className="content-title">
-															<a href="#">Event Title Goes Here</a>
-														</h4>{/*/.event-title */}
-														<div className="event-date-time-place">
-															<time dateTime="2014-06-30">
-																<span><i className="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
-													</time>
-
-															<span><i className="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
-												</div>
-														<div className="event-img">
-															<img src="images/event-post-image/post-4.jpg" alt="Event Post" />
-														</div>{/*/.event-img */}
-													</div>{/*/.event-content  */}
-												</div>{/*/.item col-md-12 */}
-
+												
+						{items}
 
 											</div>{/*/#event-post-slider */}
 

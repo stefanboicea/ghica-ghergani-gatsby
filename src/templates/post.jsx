@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import { Layout, Listing, Wrapper, SliceZone, Title, SEO, Header } from '../components'
 import Categories from '../components/Listing/Categories'
 import website from '../../config/website'
+import Img from 'gatsby-image'
 
 
 const PostWrapper = Wrapper.withComponent('main')
@@ -25,38 +26,38 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
         article
       />
       <React.Fragment>
-      <div class="container blog-page-container">
-			<div class="row">
-				<div id="blog-section" class="col-md-8 blog-section">
+      <div className="container blog-page-container">
+			<div className="row">
+				<div id="blog-section" className="col-md-8 blog-section">
 
 					{/* Post Box*/}
-					<div class="row post-box">
-						<div class="col-sm-2">
-							<div class="publish-date">
-								<p class="day">12</p>
-								<p class="month-year"><time datetime="2014-05-12">May 2014 </time></p>
+					<div className="row post-box">
+						<div className="col-sm-2">
+							<div className="publish-date">
+								{/* <p className="day">12</p> */}
+								<p className="month-year">{data.date} </p>
 							</div>{/* /.publish-date */}
 
-							{/* <div class="post-category">
-								<span><i class="fa fa-picture-o"></i></span>
+							{/* <div className="post-category">
+								<span><i className="fa fa-picture-o"></i></span>
 							</div> */}
 
 						</div>{/* /.col-sm-2 */}
 
-						<div class="col-sm-10">
-							<article class="post-content">
-								<figure class="featured-image">
-									<img src="images/post-image/01.jpg" alt="featured image" />
+						<div className="col-sm-10">
+							<article className="post-content">
+								<figure className="featured-image">
+                <Img fluid={data.coverimage.localFile.childImageSharp.fluid} />
 								</figure>
 								
-								<h2 class="post-title">
+								<h2 className="post-title">
 									<a href="#">{data.title.text}</a>
 								</h2>
 
-								{/* <p class="post-meta">
-									Posted by <a class="post-meta-element" href="#">Kim Nilson</a> | 
-									With <a class="comments" href="#comments">230 Comments</a> |
-									In <a href="#" class="categorys">Charity</a>
+								{/* <p className="post-meta">
+									Posted by <a className="post-meta-element" href="#">Kim Nilson</a> | 
+									With <a className="comments" href="#comments">230 Comments</a> |
+									In <a href="#" className="categorys">Charity</a>
 								</p> */}
 								<p>
 									<strong>{data.description}</strong>
@@ -72,13 +73,13 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 				</div>{/* /#blog-section */}	
 
 
-				<aside id="blog-sidebar" class="col-md-4 blog-sidebar">
-					<div class="widget clearfix">
-						<h3 class="title">
+				<aside id="blog-sidebar" className="col-md-4 blog-sidebar">
+					<div className="widget clearfix">
+						<h3 className="title">
 							Categorii
 						</h3>
 
-						<ul class="widget-content">
+						<ul className="widget-content">
             <Categories categories={categories} />
 						</ul>{/* /.widget-content */}
 					</div>{/* /.widget */}
@@ -96,8 +97,8 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 
 		{/* Scroll to Top */}
 		<div id="scroll-to-top">
-			<div class="hex scroll-top">
-				<span><i class="fa fa-chevron-up"></i></span>
+			<div className="hex scroll-top">
+				<span><i className="fa fa-chevron-up"></i></span>
 			</div>
 		</div>{/* /#scroll-to-top */}
 		{/* Scroll to Top End*/}
@@ -128,8 +129,17 @@ export const pageQuery = graphql`
         title {
           text
         }
+        coverimage {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
         description
-        date(formatString: "DD.MM.YYYY")
+        date(formatString: "MMMM Do, YYYY")
         categories {
           category {
             document {

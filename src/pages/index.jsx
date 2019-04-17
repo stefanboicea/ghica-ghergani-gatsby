@@ -8,7 +8,6 @@ class Index extends Component {
 		const {
 			data: { homepage, topSection, aboutSection, aboutParalaxSection, teamSection, volunteerSection, servicesSection, causesSection, eventsSection, testimonialSection, posts, elementegalerie },
 		} = this.props
-		console.log(teamSection.data)
 		return (
 			<React.Fragment>
 				<div className="main-menu-container navbar-fixed-top">
@@ -72,8 +71,8 @@ class Index extends Component {
 					<PricingSection></PricingSection>
 				}
 
-				{homepage.data.show_testimonials_section === 'yes' &&
-					<TestimonalSection data={testimonialSection}></TestimonalSection>
+				{homepage.data.show_testimonails_section === 'yes' &&
+					<TestimonalSection data={testimonialSection.data}></TestimonalSection>
 				}
 
 				{homepage.data.show_gallery_section === 'yes' &&
@@ -81,7 +80,7 @@ class Index extends Component {
 				}
 
 				{homepage.data.show_causes_section === 'yes' &&
-					<CausesSection data={causesSection}></CausesSection>
+					<CausesSection data={causesSection.data}></CausesSection>
 				}
 
 				{homepage.data.show_news_section === 'yes' &&
@@ -89,7 +88,7 @@ class Index extends Component {
 				}
 
 				{homepage.data.show_events_section === 'yes' &&
-					<EventsSection data={eventsSection}></EventsSection>
+					<EventsSection data={eventsSection.data}></EventsSection>
 				}
 
 				{/* {homepage.data.show_clients_section === 'yes' &&
@@ -295,6 +294,7 @@ export const pageQuery = graphql`
 			data {
 				testimonials {
 					name
+					description
 					avatar {
 						url
 					}
@@ -308,7 +308,17 @@ export const pageQuery = graphql`
           data {
             title {
               text
-            }
+			}
+			coverimage {
+				localFile {
+				  childImageSharp {
+					fluid(maxWidth: 1200, quality: 90) {
+					  ...GatsbyImageSharpFluid_withWebp
+					}
+				  }
+				}
+			  }
+			description
             date(formatString: "DD.MM.YYYY")
             categories {
               category {

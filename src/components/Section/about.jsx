@@ -5,6 +5,26 @@ import { Link } from 'gatsby'
 export default class AboutSection extends Component {
     render() {
         const { data } = this.props
+        let items = []
+        let itemsli = []
+        for (const [index, item] of data.carousel.entries()) {
+            let className = 'item'
+            let classNameLi = ''
+            if (index === 0) {
+                className = 'item active'
+                classNameLi = 'active'
+            }
+
+            itemsli.push(
+                <li data-target="#about-img-carousel" data-slide-to={index} className={classNameLi} key={index}></li>
+            )
+
+            items.push(
+                <div className={className} key={index}>
+                    <img src={item.image.url} />
+                </div>
+            )
+        }
         return (
             <React.Fragment>
                 <section id="about">
@@ -41,21 +61,10 @@ export default class AboutSection extends Component {
                                             <div className="meida-container">
                                                 <div id="about-img-carousel" className="about-img-carousel carousel slide" data-ride="carousel">
                                                     <ol className="carousel-indicators">
-                                                        <li data-target="#about-img-carousel" data-slide-to="0" className="active"></li>
-                                                        <li data-target="#about-img-carousel" data-slide-to="1"></li>
-                                                        <li data-target="#about-img-carousel" data-slide-to="2"></li>
+                                                        {itemsli}
                                                     </ol>
                                                     <div className="carousel-inner">
-
-                                                        <div className="item active">
-                                                            <img src="images/about-carousel/01.jpg" alt="carousel image" />
-                                                        </div>
-                                                        <div className="item">
-                                                            <img src="images/about-carousel/02.jpg" alt="carousel image" />
-                                                        </div>
-                                                        <div className="item">
-                                                            <img src="images/about-carousel/03.jpg" alt="carousel image" />
-                                                        </div>
+                                                        {items}
                                                     </div>
                                                 </div>
                                             </div>
@@ -73,7 +82,7 @@ export default class AboutSection extends Component {
                                     <div className="section-content">
                                         <div className="media-content media-left col-md-4 from-bottom delay-200">
                                             <div className="meida-container video-container">
-                                                <iframe src="//www.youtube.com/embed/WOC5kHtn_x4" frameBorder="0" allowFullScreen></iframe>
+                                                <iframe src={data.iframelink.url} frameBorder="0" allowFullScreen></iframe>
                                             </div>
                                         </div>
 

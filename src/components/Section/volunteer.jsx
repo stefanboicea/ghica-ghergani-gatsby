@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 export default class VolunteerSection extends Component {
 	render() {
 		const { data } = this.props
+		
 		return (
 			<React.Fragment>
 				{/*Volunteer Section */}
@@ -21,7 +22,7 @@ export default class VolunteerSection extends Component {
 									<div className="section-content">
 										<div className="media-content media-left col-md-4 from-bottom delay-200">
 											<div className="meida-container">
-												<img src="images/volunteer.jpg" alt="volunteer" />
+												<img src={data.image.url} alt="volunteer" />
 											</div>
 										</div>
 

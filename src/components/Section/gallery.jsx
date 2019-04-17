@@ -26,7 +26,7 @@ export default class Gallery extends Component {
                                     Galerie
 						</h2>{/*/.section-title */}
                                 <p className="section-description">
-                                    Descriere galerie
+                                    Aici va sta galeria
 						</p>
                             </div>{/*/.section-head */}
 
