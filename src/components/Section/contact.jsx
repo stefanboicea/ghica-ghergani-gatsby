@@ -19,7 +19,7 @@ export default class ContactSection extends Component {
             </h2>
                                 <p className="section-description">
                                     {data.subtitle}
-            </p>
+                                </p>
                             </div>{/*/.section-head */}
                         </div>
 
@@ -31,7 +31,8 @@ export default class ContactSection extends Component {
                                             Drop us a message
                     </h3>
 
-                                        <form className="contact-form" id="contact-form" action="email.php" method="post">
+                                        <form className="contact-form" id="contact-form" data-netlify="true"
+                                            data-netlify-honeypot="bot-field" method="post">
                                             <div id="name_error" className="error">
                                                 <img src="assets/images/email/error.png" alt="Error!" />
                                                 Please enter your name.
@@ -75,21 +76,21 @@ export default class ContactSection extends Component {
                                     <div className="contact-info">
                                         <h3 className="content-title">
                                             {data.infotitle}
-                    </h3>
+                                        </h3>
                                         <p className="content-description">
                                             {data.description}
-                    </p>
+                                        </p>
                                         <address>
                                             <ul className="contact-address">
                                                 <li className="fa-map-marker">
                                                     {data.location}
-                            </li>
+                                                </li>
                                                 <li className="fa-phone">
                                                     {data.phonelist}
-                            </li>
+                                                </li>
                                                 <li className="fa-envelope">
                                                     {data.maillist}
-                            </li>
+                                                </li>
                                             </ul>{/*/.contact-address */}
                                         </address>
                                     </div>{/*/.contact-info */}
