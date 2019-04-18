@@ -14,7 +14,7 @@ export default class ClientsSection extends Component {
 							<div className="container">
 								<div className="section-head">
 									<h3 className="parallax-title">
-										Our Partners
+										Parteneri
 							</h3>
 								</div>{/*/.section-head */}
 

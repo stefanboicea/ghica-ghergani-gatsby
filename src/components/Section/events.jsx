@@ -22,7 +22,7 @@ export default class EventsSection extends Component {
 						<span><i className="fa fa-map-marker"></i></span> Locatie: {item.place}
 			</div>
 					<div className="event-img">
-						<img src="images/event-post-image/post-1.jpg" alt="Event Post" />
+						<img src={item.image.url} />
 					</div>{/*/.event-img */}
 				</div>{/*/.event-content  */}
 			</div>

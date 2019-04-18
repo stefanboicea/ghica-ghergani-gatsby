@@ -91,9 +91,9 @@ class Index extends Component {
 					<EventsSection data={eventsSection.data}></EventsSection>
 				}
 
-				{/* {homepage.data.show_clients_section === 'yes' &&
+				{homepage.data.show_partners_section === 'yes' &&
 					<ClientsSection data={null}></ClientsSection>
-				} */}
+				}
 
 				{homepage.data.show_contact_section === 'yes' &&
 					<ContactSection data={null}></ContactSection>
@@ -283,7 +283,7 @@ export const pageQuery = graphql`
 				events {
 					title
 					place
-					time
+					time (formatString: "DD.MM.YYYY hh:mm")
 					image {
 						url
 					}
