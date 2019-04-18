@@ -25,8 +25,8 @@ export default class ServiceSection extends Component {
 									</p>{/*/.service-description */}
 
 						<div className="services-button">
-							<a href="#" className="btn custom-btn angle-effect">
-								Learn More
+							<a href={item.linkbutton.url} className="btn custom-btn angle-effect">
+								Detalii
 										</a>
 						</div>{/*/.services-button */}
 					</div>{/*/.service-box */}

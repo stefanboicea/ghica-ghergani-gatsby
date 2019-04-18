@@ -41,8 +41,8 @@ export default class VolunteerSection extends Component {
 												{data.description}
 											</p>
 											<p>
-												<a href="#" className="btn custom-btn angle-effect">
-													Apply Now
+												<a href={Link.url} className="btn custom-btn angle-effect">
+													Aplica acum
 										</a>
 											</p>
 										</div>

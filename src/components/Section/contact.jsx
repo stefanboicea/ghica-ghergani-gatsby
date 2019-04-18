@@ -18,7 +18,7 @@ export default class ContactSection extends Component {
                                     Contact
             </h2>
                                 <p className="section-description">
-                                    IF YOU FEEL, NEED WORKING FOR CHILD PLEASE CONTACT WITH US AND LET US KNOW HOW YOU LIKE TO WORK FOR THEM. CONTENT WITH US IF ANY MORE INFORMATION NEEDED.
+                                    {data.subtitle}
             </p>
                             </div>{/*/.section-head */}
                         </div>
@@ -74,21 +74,21 @@ export default class ContactSection extends Component {
                                 <div className="col-md-6">
                                     <div className="contact-info">
                                         <h3 className="content-title">
-                                            Contact Info
+                                            {data.infotitle}
                     </h3>
                                         <p className="content-description">
-                                            If you need more charity website templates or this charity website template contact with us. We will help you to make successful any of your charity works. Feel free to contact with us through mail address.
+                                            {data.description}
                     </p>
                                         <address>
                                             <ul className="contact-address">
                                                 <li className="fa-map-marker">
-                                                    13/2 Elizabeth St, Melbourne VIC 3000, Australia
+                                                    {data.location}
                             </li>
                                                 <li className="fa-phone">
-                                                    +61 3146 8728, +61 0987 6543
+                                                    {data.phonelist}
                             </li>
                                                 <li className="fa-envelope">
-                                                    support@envato.net
+                                                    {data.maillist}
                             </li>
                                             </ul>{/*/.contact-address */}
                                         </address>
@@ -96,8 +96,8 @@ export default class ContactSection extends Component {
                                 </div>{/*/.col-md-6 */}
                             </div>
                         </div>
-                        <div className="bottom-angle">
-                        </div>
+                        {/* <div className="bottom-angle">
+                        </div> */}
                     </div>{/*/.contact-section */}
                 </section>{/*/#contact */}
                 {/*Contact Section End */}

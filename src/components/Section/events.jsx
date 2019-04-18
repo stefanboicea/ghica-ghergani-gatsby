@@ -12,10 +12,10 @@ export default class EventsSection extends Component {
 				<div className="item col-md-12" key={index}>
 				<div className="event-content">
 					<h4 className="content-title">
-						<a href="#">{item.title}</a>
+						<a href={item.link.url}>{item.title}</a>
 					</h4>{/*/.event-title */}
 					<div className="event-date-time-place">
-						<time dateTime="2014-06-30">
+						<time dateTime={item.time}>
 							<span><i className="fa fa-clock-o"></i></span> {item.time}
 				</time>
 

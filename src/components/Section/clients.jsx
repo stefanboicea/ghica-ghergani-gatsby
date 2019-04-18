@@ -4,7 +4,20 @@ import { Link } from 'gatsby'
 
 export default class ClientsSection extends Component {
     render() {
-        const { data } = this.props
+		const { data } = this.props
+        let items = []
+        let itemsli = []
+        for (const [index, item] of data.partners.entries()) {
+            items.push(
+				<div className="col-sm-3">
+				<div className="client-logo">
+					<a href={item.link.url}>
+						<img src={item.logo.url}  />
+					</a>
+				</div>{/*/.client-logo */}
+			</div>
+            )
+        }
         return (
             <React.Fragment>
                		{/*Clients Section */}
@@ -20,37 +33,8 @@ export default class ClientsSection extends Component {
 
 								<div className="row">
 									<div className="clients-logo">
-										<div className="col-sm-3">
-											<div className="client-logo">
-												<a href="#">
-													<img src="images/clients-logo/client-1.png" alt="Clients Logo" />
-												</a>
-											</div>{/*/.client-logo */}
-										</div>{/*/.col-sm-3 */}
-
-										<div className="col-sm-3">
-											<div className="client-logo">
-												<a href="#">
-													<img src="images/clients-logo/client-2.png" alt="Clients Logo" />
-												</a>
-											</div>{/*/.client-logo */}
-										</div>{/*/.col-sm-3 */}
-
-										<div className="col-sm-3">
-											<div className="client-logo">
-												<a href="#">
-													<img src="images/clients-logo/client-3.png" alt="Clients Logo" />
-												</a>
-											</div>{/*/.client-logo */}
-										</div>{/*/.col-sm-3 */}
-
-										<div className="col-sm-3">
-											<div className="client-logo">
-												<a href="#">
-													<img src="images/clients-logo/client-4.png" alt="Clients Logo" />
-												</a>
-											</div>{/*/.client-logo */}
-										</div>{/*/.col-sm-3 */}
+								
+									{items}
 									</div>{/*/.clients-logo */}
 								</div>{/*/.low */}
 							</div>

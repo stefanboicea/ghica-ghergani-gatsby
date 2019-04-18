@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { TopSection, AboutSection, AboutParalaxSection, CausesSection, TestimonalSection, EventsSection, PricingSection, ServiceSection, VolunteerSection, NewsSection, GalleryItem, Gallery, ClientsSection, ContactSection, TeamSection } from '../components/Section';
+import { TopSection, AboutSection, AboutParalaxSection, CausesSection, TestimonalSection, EventsSection, PricingSection, ServiceSection, VolunteerSection, NewsSection, Gallery, ClientsSection, ContactSection, TeamSection } from '../components/Section';
 
 class Index extends Component {
 	render() {
 		const {
-			data: { homepage, topSection, aboutSection, aboutParalaxSection, teamSection, volunteerSection, servicesSection, causesSection, eventsSection, testimonialSection, posts, elementegalerie },
+			data: { homepage, topSection, aboutSection, aboutParalaxSection, teamSection, volunteerSection, servicesSection, causesSection, eventsSection, testimonialSection, partnersSection, contactSection,posts, elementegalerie },
 		} = this.props
 		return (
 			<React.Fragment>
@@ -92,23 +92,18 @@ class Index extends Component {
 				}
 
 				{homepage.data.show_partners_section === 'yes' &&
-					<ClientsSection data={null}></ClientsSection>
+					<ClientsSection data={partnersSection.data}></ClientsSection>
 				}
 
 				{homepage.data.show_contact_section === 'yes' &&
-					<ContactSection data={null}></ContactSection>
+					<ContactSection data={contactSection.data}></ContactSection>
 				}
-
-				{/*Google Map Section */}
-				<div id="google-map">
+				
+				{/* <div id="google-map">
 					<div className="map-container">
 						<div id="googleMaps" className="google-map-container"></div>
 					</div>
-				</div>{/*/#google-map*/}
-				{/*Google Map Section End */}
-
-
-
+				</div> */}
 
 				{/*Scroll to Top */}
 				<div id="scroll-to-top">
@@ -193,6 +188,9 @@ export const pageQuery = graphql`
 					toptext
 					middletext
 					buttomtext
+					linkbutton {
+						url
+					}
 				}
 			}
 		}
@@ -246,6 +244,9 @@ export const pageQuery = graphql`
 				title
 				subtitle
 				description
+				link {
+					url
+				}
 				image {
 					url
 				}
@@ -258,6 +259,9 @@ export const pageQuery = graphql`
 				services {
 					name
 					description
+					linkbutton {
+						url
+					}
 				}
 			}
 		}
@@ -270,6 +274,9 @@ export const pageQuery = graphql`
 					description
 					donationpercent
 					donationlimit
+					donationlink {
+						url
+					}
 					image {
 						url
 					}
@@ -287,6 +294,9 @@ export const pageQuery = graphql`
 					image {
 						url
 					}
+					link {
+						url
+					}
 				}
 			}
 		}
@@ -299,6 +309,28 @@ export const pageQuery = graphql`
 						url
 					}
 				}
+			}
+		}
+		partnersSection: prismicPartners {
+			data{
+				partners {
+					logo {
+						url
+					}
+					link {
+						url
+					}
+				}
+			}
+		}
+		contactSection: prismicContactsection {
+			data{
+			subtitle
+				infotitle
+				description
+				location
+				phonelist
+				maillist
 			}
 		}
     posts: allPrismicPost(limit: 4, sort: { fields: [data___date], order: DESC }) {
