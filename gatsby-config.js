@@ -74,7 +74,7 @@ module.exports = {
       },
     },
     // Must be placed at the end
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
 }
