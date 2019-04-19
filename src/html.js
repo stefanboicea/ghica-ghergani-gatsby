@@ -42,8 +42,6 @@ export default function HTML(props) {
 		    <script src="assets/js/plugins.js"></script>
 		    <script src="assets/js/jquery.parallax.js"></script>				
 		    <script src="assets/js/functions.js"></script>
-		    <script src="http://maps.google.com/maps/api/js?sensor=true"></script> 
-		    <script src="assets/js/gmap3.js"></script>
         <script type="text/javascript"
   dangerouslySetInnerHTML={{
     __html: `
