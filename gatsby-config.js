@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'ghica-floresti',
+        repositoryName: 'ghica-ghergani',
         accessToken: `${process.env.API_KEY}`,
         // Get the correct URLs in blog posts
         linkResolver: () => post => `/${post.uid}`,
