@@ -51,6 +51,7 @@ jQuery(document).ready(function($) {
         $("#cms-mainnav-v4").removeClass('open');
     });
 
+	$(window).bind("unload", function() { });
 
 	/**
 	 * window load event.

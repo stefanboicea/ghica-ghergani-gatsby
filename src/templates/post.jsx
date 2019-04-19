@@ -47,7 +47,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 						<div className="col-sm-10">
 							<article className="post-content">
 								<figure className="featured-image">
-                <Img fluid={data.coverimage.localFile.childImageSharp.fluid} />
+                {/* <Img fluid={data.coverimage.localFile.childImageSharp.fluid} /> */}
 								</figure>
 								
 								<h2 className="post-title">
@@ -130,13 +130,7 @@ export const pageQuery = graphql`
           text
         }
         coverimage {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1200, quality: 90) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
+          url
         }
         description
         date(formatString: "MMMM Do, YYYY")
@@ -183,13 +177,7 @@ export const pageQuery = graphql`
             id
             primary {
               image {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1200, quality: 90) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
+                url
               }
             }
           }

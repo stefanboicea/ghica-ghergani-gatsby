@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const postTemplate = require.resolve('./src/templates/post.jsx')
   const categoryTemplate = require.resolve('./src/templates/category.jsx')
+  const pageTemplate = require.resolve('./src/templates/page.jsx')
 
   const result = await wrapper(
     graphql(`
@@ -40,6 +41,54 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `)
   )
+
+
+
+  const pagesResult = await wrapper(
+    graphql(`
+    {
+      allPrismicPage {
+        edges {
+          node {
+            id
+            uid
+            data {
+              title {
+                text
+              }
+              description
+              coverimage {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+    `)
+  )
+
+  const pagesList = pagesResult.data.allPrismicPage.edges
+  pagesList.forEach(edge => {
+    if (edge.node.uid === 'index') {
+      createPage({
+        path: `/`,
+        component: pageTemplate,
+        context: {
+          uid: edge.node.uid,
+        },
+      })
+    }
+    else {
+      createPage({
+        path: `${edge.node.uid}`,
+        component: pageTemplate,
+        context: {
+          uid: edge.node.uid,
+        },
+      })
+    }
+  })
 
   const categorySet = new Set()
   const postsList = result.data.allPrismicPost.edges
