@@ -5,17 +5,10 @@ import { Link } from 'gatsby'
 export default class CausesSection extends Component {
 	render() {
 		const { data } = this.props
-		console.log(data)
 		let items = []
 		let itemsli = []
 		for (const [index, item] of data.causes.entries()) {
-			let className = 'item'
-			let classNameLi = ''
-			if (index === 0) {
-				className = 'item active'
-				classNameLi = 'active'
-			}
-
+			
 			items.push(
 				<div className="item col-md-12" key={index}>
 					<div className="causes-post">

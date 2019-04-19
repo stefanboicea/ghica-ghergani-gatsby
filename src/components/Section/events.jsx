@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 export default class EventsSection extends Component {
 	render() {
 		const { data } = this.props
-		console.log(data)
         let items = []
         for (const [index, item] of data.events.entries()) {
             items.push(

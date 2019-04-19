@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 export default class AboutParalaxSection extends Component {
     render() { 
 		const { data } = this.props
-		console.log(data)
         return (
             <React.Fragment>
                	<section id="about-parallax">

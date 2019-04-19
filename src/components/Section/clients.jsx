@@ -9,7 +9,7 @@ export default class ClientsSection extends Component {
         let itemsli = []
         for (const [index, item] of data.partners.entries()) {
             items.push(
-				<div className="col-sm-3">
+				<div className="col-sm-3" key={index}>
 				<div className="client-logo">
 					<a href={item.link.url}>
 						<img src={item.logo.url}  />
