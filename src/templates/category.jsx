@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Layout, Listing, Wrapper, Title, SEO, Header } from '../components'
+import { Layout, Listing, Wrapper,  SEO, Header } from '../components'
 import website from '../../config/website'
 
 
 
 
-const CatWrapper = Wrapper.withComponent('main')
+const CatWrapper = ''
 
 const Category = ({
   pageContext: { category },
@@ -19,9 +19,9 @@ const Category = ({
   <Layout>
     <SEO title={`Category: ${category} | ${website.titleAlt}`} pathname={location.pathname} />
     <CatWrapper id={website.skipNavId}>
-      <Title style={{ marginTop: '4rem' }}>
+      
         {totalCount} {totalCount === 1 ? 'Post' : 'Posts'} {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
-      </Title>
+      
       <Listing posts={edges} />
     </CatWrapper>
   </Layout>

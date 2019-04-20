@@ -8,7 +8,7 @@ const BlockQuote = styled.blockquote`
 
 const Quote = ({ input }) => (
   <BlockQuote>
-    <div dangerouslySetInnerHTML={{ __html: input.primary.quote.html }} />
+    <div dangerouslySetInnerHTML={{ __html: input.primary.quote_text.html }} />
   </BlockQuote>
 )
 

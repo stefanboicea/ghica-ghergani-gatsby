@@ -8,7 +8,7 @@ import website from '../../config/website'
 import Img from 'gatsby-image'
 
 
-const PostWrapper = Wrapper.withComponent('main')
+const PostWrapper = styled.div
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost

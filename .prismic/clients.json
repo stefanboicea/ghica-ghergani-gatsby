@@ -1,0 +1,43 @@
+{
+    "type": "Slice",
+    "fieldset": "Clients",
+    "description": "Section for clients information",
+    "icon": "person_pin",
+    "non-repeat": {
+      "clients_section": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Clients Section",
+          "placeholder": "Clients"
+        }
+      }
+    },
+    "repeat": {
+      "full_name": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "heading3",
+          "label": "Client Full Name",
+          "placeholder": "Mercedes"
+        }
+      },
+      "portrait": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 1000,
+            "height": 1000
+          },
+          "thumbnails": [
+            {
+              "name": "Mobile",
+              "width": 500,
+              "height": 500
+            }
+          ],
+          "label": "Portrait"
+        }
+      }
+    }
+ }

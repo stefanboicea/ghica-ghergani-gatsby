@@ -25,16 +25,16 @@ class Portofolio extends Component {
     }
 }
 
-export default Blog
+export default Portofolio
 
-Blog.propTypes = {
+Portofolio.propTypes = {
     data: PropTypes.shape({
         posts: PropTypes.object.isRequired,
     }).isRequired,
 }
 
 export const pageQuery = graphql`
-query BlogQuery {
+query PortofolioQuery {
     posts: allPrismicPost(limit: 4, sort: { fields: [data___date], order: DESC }) {
       edges {
         node {

@@ -1,0 +1,51 @@
+ {
+    "type": "Slice",
+    "fieldset": "Team",
+    "description": "Section for team member information with portrait",
+    "icon": "person_pin",
+    "non-repeat": {
+      "team_section": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Team Section",
+          "placeholder": "Management"
+        }
+      }
+    },
+    "repeat": {
+      "first_and_lastname": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "heading3",
+          "label": "First and LastName",
+          "placeholder": "John Doe"
+        }
+      },
+      "position": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Position",
+          "placeholder": "Design director"
+        }
+      },
+      "portrait": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 1000,
+            "height": 1000
+          },
+          "thumbnails": [
+            {
+              "name": "Mobile",
+              "width": 500,
+              "height": 500
+            }
+          ],
+          "label": "Portrait"
+        }
+      }
+    }
+ }
