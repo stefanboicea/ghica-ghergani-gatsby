@@ -97,8 +97,8 @@ const PureLayout = ({ children, data, customSEO }) => (
                             </ul>
                           </li>
                           <li className="menu-item-has-children">
-                            <a href="blogs.html">Blog</a>
-                            <ul className="sub-menu">
+                            <a href="/blog">Blog</a>
+                            {/* <ul className="sub-menu">
                               <li><a href="blog-standard.html">Blog Standard</a></li>
                               <li><a href="blog-grid.html">Blog Grid</a></li>
                               <li><a href="blog-masonry.html">Blog Masonry</a></li>
@@ -113,7 +113,7 @@ const PureLayout = ({ children, data, customSEO }) => (
                                   <li><a href="quote-post.html">Quote post</a></li>
                                 </ul>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li className="menu-item-has-children">
                             <a href="#">Contact</a>
