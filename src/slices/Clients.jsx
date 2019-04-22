@@ -4,23 +4,52 @@ import PropTypes from 'prop-types'
 
 
 const Clients = ({ input }) => (
-  <div class="section pb-8">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div data-wow-delay="0.3s" class="pb-7 custom-header-1 wow fadeInUp">
-          “The world offers itself to your imagination.”
-        </div>
-        <div class="text-center">
-          <img width="133" height="28" src="../images/assets/icon-under-title.png"  />
-        </div>
-        <div data-wow-delay="0.3s" class="text-center mt-6 wow fadeInUp">
-          <p>Monaco was founded in 2000. It has been serving thousands of customers and has been growing ever since its finding. Our company is a nimble team of dedicated designers, <br />developers and strategists; compelled to help guide users people down the right path. Through key research and analysis, innovative ideas, and interactive design, we help <br />organizations design intuitive online experiences that generate business.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+	<div className="section mb-5">
+					<div className="container">
+						<div className="row">
+							<div data-wow-delay="0.3s" className="col-sm-12 wow fadeInUp">
+								<h1 className="text-center">OUR CLIENTS</h1>
+								<p className="desc mb-7">Clients we have worked with</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="cms-grid-wraper cms-grid-client">
+								<div className="cms-grid cms-grid">
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+									<div className="cms-grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12 text-center">
+										<div className="cms-client-logo has-thumbnail">
+											<img width="170" height="93" src="../images/client/client_170x93.jpg" alt="client1" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 )
 
 export default Clients
