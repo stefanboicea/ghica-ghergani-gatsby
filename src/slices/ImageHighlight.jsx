@@ -12,14 +12,14 @@ const ImageHighlight = ({ input }) => (
                         <div className="cms-fancyboxes-body">
                             <div className="cms-fancybox-item row has-image">
                                 <div data-wow-delay="0.3s" className="col-xs-12 col-sm-12 col-md-6 col-lg-6 wow flipInY">
-                                    <img src="../images/image_570x300.jpg" alt="" />
+                                    <img src={input.primary.featured_image.url} alt="" />
                                 </div>
                                 <div data-wow-delay="0.3s" className="col-xs-12 col-sm-12 col-md-6 col-lg-6 wow fadeInRight">
                                     <div className="fancy-box-content-inner">
                                         <div className="fancy-box-content-inner2">
-                                            <h2>OUR MISSION</h2>
+                                            <h2>{input.primary.title.text}</h2>
                                             <p>
-                                                Throughout the project you’ll always know exactly where things stand and where they’re headed. Every project is assigned a dedicated project manager to keep things on target and keep you informed.
+                                                {input.primary.headline.text}
 														</p>
                                         </div>
                                     </div>

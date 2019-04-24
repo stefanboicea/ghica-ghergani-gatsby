@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import { BodyText, CodeBlock, Image, Quote, QuoteDescription, Team, Clients, ImageHighlight,FullWidthImage } from '../slices'
+import { BodyText, CodeBlock, Image, Quote, QuoteDescription, Team, Clients, ImageHighlight,FullWidthImage,FancyRow } from '../slices'
 
 
 
@@ -32,8 +32,10 @@ export default class SliceZone extends Component {
           return <Clients key={s.id} input={s} />
         case 'full_width_image':
           return <FullWidthImage key={s.id} input={s} />
-        case 'quote_description':
+        case 'quote_detail':
           return <QuoteDescription key={s.id} input={s} />
+        case 'fancy_row':
+          return <FancyRow key={s.id} input={s} />
         default:
           return null
       }
@@ -43,5 +45,5 @@ export default class SliceZone extends Component {
 }
 
 SliceZone.propTypes = {
-  allSlices: PropTypes.array.isRequired,
+  allSlices: PropTypes.array,
 }

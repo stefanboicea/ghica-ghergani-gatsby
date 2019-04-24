@@ -14,6 +14,8 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
 	const { data } = prismicPage
 	console.log(data)
 
+	
+
   return (
     <Layout customSEO>
       <SEO
@@ -25,12 +27,12 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
       />
       <React.Fragment>
       <div id="main" className="main clearfix">
-				<div id="page-title" className="page-title">
+				<div id="page-title" className="page-title" style={{backgroundImage: 'url(' + data.coverimage.url   +')'}}>
 					<div className="container">
 						<div className="row">
-							<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-								<h1>Our Portfolio</h1>
-								<div className="page-sub-title">Full width 3 columns (No spaces)</div>
+							<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
+								<h1>{data.title.text}</h1>
+								<div className="page-sub-title">{data.description}</div>
 							</div>
 						</div>
 					</div>
@@ -50,9 +52,9 @@ export default Page
 
 Page.propTypes = {
   data: PropTypes.shape({
-    prismicPage: PropTypes.object.isRequired,
-  }).isRequired,
-  location: PropTypes.object.isRequired,
+    prismicPage: PropTypes.object,
+  }),
+  location: PropTypes.object,
 }
 
 // The typenames come from the slice names
@@ -72,6 +74,17 @@ export const pageQuery = graphql`
 					url
 				}
 				page_content {
+					... on PrismicPagePageContentFancyRow {
+						slice_type
+						id
+						items {
+							icon {
+								url
+							}
+							title1 
+							subtitle1
+						}
+					}
 					... on PrismicPagePageContentQuoteDetail {
 						slice_type
 						id

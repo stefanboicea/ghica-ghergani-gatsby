@@ -3250,16 +3250,16 @@ body:not(.home) #masthead.header-v4 {
     background-size: inherit;
     background-attachment: fixed;
     background-position: center top;
-    background-image: url('../images/background/background_1920x600.jpg');
+    /* background-image: url('../images/background/background_1920x600.jpg'); */
 }
 .header-ontop .page-title {
-	background-image: url('../images/background/background_1920x400.jpg');
+	/* background-image: url('../images/background/background_1920x400.jpg'); */
 }
 .header-onepage .page-title {
-	background-image: url('../images/background/background_1920x400.jpg');
+	/* background-image: url('../images/background/background_1920x400.jpg'); */
 }
 .header-shop .page-title {
-	background-image: url('../images/background/background_1920x600.jpg');
+	/* background-image: url('../images/background/background_1920x600.jpg'); */
 }
 .header-v2 .page-title {
 	background-image: none;
