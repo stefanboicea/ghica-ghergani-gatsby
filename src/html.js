@@ -5,10 +5,10 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-        <link rel="shortcut icon" href="../images/favicon.ico" />
-        <title>Monaco – Beautiful Vintage Multi-Concept Theme | Audio Post</title>
+        {/* <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" /> */}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /> */}
+        {/* <link rel="shortcut icon" href="../images/favicon.ico" /> */}
+        {/* <title>Monaco – Beautiful Vintage Multi-Concept Theme | Audio Post</title> */}
 
         <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
         <link rel='stylesheet' href='../css/bootstrap.min.css' type='text/css' media='all' />
@@ -45,7 +45,7 @@ export default function HTML(props) {
         <script type='text/javascript' src='../js/bootstrap.min.js'></script>
         <script type='text/javascript' src="../js/wow.min.js"></script>
         <script type='text/javascript' src='../js/jquery.parallax-1.1.3.js'></script>
-        <script type='text/javascript' src='../js/main.js'></script>
+        {/* <script type='text/javascript' src='../js/main.js'></script> */}
         <script type='text/javascript' src='../js/mobile-menu.js'></script>
         <script type='text/javascript' src='../js/jquery.prettyPhoto.js'></script>
         <script type='text/javascript' src='../js/waypoints.min.js'></script>

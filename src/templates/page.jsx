@@ -74,6 +74,17 @@ export const pageQuery = graphql`
 					url
 				}
 				page_content {
+					... on PrismicPagePageContentVideoRow {
+						slice_type
+						id
+						items {
+						  video_link {
+							url
+						  }
+						  video_title
+						  video_description
+						}
+					  }
 					... on PrismicPagePageContentFancyRow {
 						slice_type
 						id

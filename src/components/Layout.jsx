@@ -32,13 +32,13 @@ const PureLayout = ({ children, data, customSEO }) => (
                 </div>
                 <div id="cms-nav-extra" className="cms-nav-extra main-navigation pull-right">
                   <div className="pull-left"></div>
-                  <div className="pull-left">
+                  {/* <div className="pull-left">
                     <ul>
                       <li>
                         <a id="header-widget-search"><i className="fa fa-search"></i></a>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   <div id="cms-menu-mobile" className="pull-left">
                     <ul>
                       <li>
