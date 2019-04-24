@@ -8,7 +8,6 @@ import website from '../../config/website'
 import Img from 'gatsby-image'
 
 
-const PageWrapper = ''
 
 const Page = ({ data: { prismicPage, posts }, location }) => {
 	const { data } = prismicPage

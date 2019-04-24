@@ -51,6 +51,7 @@ export default function HTML(props) {
         <script type='text/javascript' src='../js/waypoints.min.js'></script>
         <script type='text/javascript' src='../js/jquery.countTo.js'></script>
         <script type="text/javascript" src="../js/bootstrap-progressbar.min.js"></script>
+		    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
 
       </body>
     </html>

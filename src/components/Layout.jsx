@@ -32,13 +32,6 @@ const PureLayout = ({ children, data, customSEO }) => (
                 </div>
                 <div id="cms-nav-extra" className="cms-nav-extra main-navigation pull-right">
                   <div className="pull-left"></div>
-                  {/* <div className="pull-left">
-                    <ul>
-                      <li>
-                        <a id="header-widget-search"><i className="fa fa-search"></i></a>
-                      </li>
-                    </ul>
-                  </div> */}
                   <div id="cms-menu-mobile" className="pull-left">
                     <ul>
                       <li>
@@ -52,23 +45,14 @@ const PureLayout = ({ children, data, customSEO }) => (
                     <div className="cms-menu pull-right">
                       <div className="menu-main-menu-container">
                         <ul className="nav-menu">
-                          <li><a href="./">Home</a></li>
-                          <li className="menu-item-has-children">
-                            <a href="#">About us</a>
-                            <ul className="sub-menu">
-                              <li><a href="about-us.html">About us 1</a></li>
-                              <li><a href="about-us-2.html">About us 2</a></li>
-                              <li><a href="about-me.html">About Me</a></li>
-                            </ul>
+                          <li><a href="./">Acasa</a></li>
+                          <li>
+                            <a href="./despre">Despre noi</a>
                           </li>
-                          <li className="menu-item-has-children">
-                            <a href="#">Services</a>
-                            <ul className="sub-menu">
-                              <li><a href="our-service.html">Our service 1</a></li>
-                              <li><a href="our-service-2.html">Our Service 2</a></li>
-                            </ul>
+                          <li>
+                            <a href="./servicii">Servicii</a>
                           </li>
-                          <li className="current_page_item menu-item-has-children">
+                          {/* <li className="current_page_item menu-item-has-children">
                             <a href="our-portfolio.html">Portfolio</a>
                             <ul className="sub-menu">
                               <li className="menu-item-has-children">
@@ -95,25 +79,9 @@ const PureLayout = ({ children, data, customSEO }) => (
                                 </ul>
                               </li>
                             </ul>
-                          </li>
+                          </li> */}
                           <li className="menu-item-has-children">
                             <a href="/blog">Blog</a>
-                            {/* <ul className="sub-menu">
-                              <li><a href="blog-standard.html">Blog Standard</a></li>
-                              <li><a href="blog-grid.html">Blog Grid</a></li>
-                              <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                              <li className="menu-item-has-children">
-                                <a href="#">Single post format</a>
-                                <ul className="sub-menu">
-                                  <li><a href="standard-post.html">Standard Post</a></li>
-                                  <li><a href="no-image-post.html">No Image Post</a></li>
-                                  <li><a href="gallery-post.html">Gallery Post</a></li>
-                                  <li><a href="audio-post.html">Audio Post</a></li>
-                                  <li><a href="video-post.html">Video post</a></li>
-                                  <li><a href="quote-post.html">Quote post</a></li>
-                                </ul>
-                              </li>
-                            </ul> */}
                           </li>
                           <li className="menu-item-has-children">
                             <a href="#">Contact</a>
@@ -148,13 +116,13 @@ const PureLayout = ({ children, data, customSEO }) => (
               <div className="container">
                 <div className="row">
                   <div className="footer-address footer-bottom-1 pt-7 pb-4 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div className="cms-address">
+                    {/* <div className="cms-address">
                       <p>14 Tottenham Court Road, London, England / (102) 3456 789 / info@domain.com</p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="footer-copyright footer-bottom-2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div className="cms-copyright">
-                      <p>Copyright © 2016 TK-Themes</p>
+                      <p>© 2019 | Domeniul Ghica SRL</p>
                     </div>
                   </div>
                 </div>
