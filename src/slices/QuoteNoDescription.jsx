@@ -7,7 +7,7 @@ const QuoteNoDesctiption = ({ input }) => (
     <div className="row">
       <div className="col-sm-12">
         <div data-wow-delay="0.3s" className="pb-7 custom-header-1 wow fadeInUp">
-          {input.primary.quote_text.text}
+          {input.primary.quote_text}
         </div>
         <div className="text-center">
           <img width="133" height="28" src="../images/assets/icon-under-title.png"  />
