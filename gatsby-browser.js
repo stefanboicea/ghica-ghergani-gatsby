@@ -8,7 +8,7 @@ exports.onInitialClientRender = () => {
   }
 
   exports.onRouteUpdate = () => {
-    console.log('roupte updateing');
+    
     jQuery(document).ready(function($) {
       "use strict";
       /* pretty photo */
@@ -67,7 +67,6 @@ exports.onInitialClientRender = () => {
        * window load event.
        */
       
-        console.log('loding');
                   
         $(".noo-spinner").remove();
         $("#cms-page").css("opacity", "1");

@@ -7,7 +7,7 @@ const VideoRow = ({ input }) => {
         items.push(
             <div data-wow-delay="0.3s" className="cms-grid-item text-center col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp" key={index}>
             <div className="cms-grid-media overlay-wrap has-thumbnail">
-            <iframe src="https://www.youtube.com/embed?v=WOC5kHtn_x4" frameBorder="0" height="250" allowFullScreen=""></iframe>
+            <iframe src={item.video_link.url} frameBorder="0" height="250" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 
               
             </div>

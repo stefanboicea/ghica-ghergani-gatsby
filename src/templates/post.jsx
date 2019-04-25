@@ -11,109 +11,101 @@ import Img from 'gatsby-image'
 const PostWrapper = styled.div
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
-  const { data } = prismicPost
-  let categories = false
-  if (data.categories[0].category) {
-    categories = data.categories.map(c => c.category.document[0].data.name)
-  }
-  return (
-    <Layout customSEO>
-      <SEO
-        title={`${data.title.text} | ${website.titleAlt}`}
-        pathname={location.pathname}
-        desc={data.description}
-        node={prismicPost}
-        article
-      />
-      <React.Fragment>
-      <div className="container blog-page-container">
-			<div className="row">
-				<div id="blog-section" className="col-md-8 blog-section">
+	const { data } = prismicPost
+	let categories = false
+	if (data.categories[0].category) {
+		categories = data.categories.map(c => c.category.document[0].data.name)
+	}
+	return (
+		<Layout customSEO>
+			<SEO
+				title={`${data.title.text} | ${website.titleAlt}`}
+				pathname={location.pathname}
+				desc={data.description}
+				node={prismicPost}
+				article
+			/>
+			<React.Fragment>
+				<div id="main" className="main clearfix">
+					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(../images/background/background_1920x400.jpg)' }}>
+						<div className="container">
+							<div className="row">
+								<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+									<h1>Standard Post</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="section">
+						<div className="container">
+							<div className="row">
+								<div className="col-sm-12 col-md-8 col-lg-8 mb-5">
+									<div className="single-post">
+										<article>
+											<div className="entry-media">
+												<img width="1170" height="790" src={prismicPost.data.coverimage.url} alt="" />
+											</div>
+											<div className="entry-header">
+												<h2 className="entry-title">Standard Post</h2>
+												<div className="entry-meta cms-meta">
+													<ul className="list-unstyled list-inline">
+														<li className="detail-date"><a href="#">{prismicPost.data.date}</a></li>
+													</ul>
+												</div>
+											</div>
+											<div className="entry-content">
+												
+											<SliceZone allSlices={data.body} />
 
-					{/* Post Box*/}
-					<div className="row post-box">
-						<div className="col-sm-2">
-							<div className="publish-date">
-								{/* <p className="day">12</p> */}
-								<p className="month-year">{data.date} </p>
-							</div>{/* /.publish-date */}
+											</div>
+											<div className="entry-footer clearfix">
+												<span className="post-share-title left">
+													<span className="h6"><i className="pe-7s-share"></i> Share</span>
+													<span className="post-share">
+														<a target="_blank" href="#"><i className="fa fa-facebook"></i></a>
+														<a target="_blank" href="#"><i className="fa fa-twitter"></i></a>
+														<a target="_blank" href="#"><i className="fa fa-pinterest"></i></a>
+														<a target="_blank" href="#"><i className="fa fa-google-plus"></i></a>
+														<a target="_blank" href="#"><i className="fa fa-linkedin"></i></a>
+													</span>
+												</span>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div id="page-sidebar" className="col-sm-12 col-md-4 col-lg-4">
+									<div id="secondary" className="widget-area">
+										<div className="widget">
+											<h3 className="wg-title">OUR DAILY INSPIRATIONS</h3>
+											<p>
+												Cherish your solitude. Take trains by yourself to places you have never been. Sleep out alone under the stars. Learn how to drive a stick shift. Go so far away that you stop being afraid of not coming back. Say no when you don’t want to do something. Say yes if your instincts are strong, even if everyone around you disagrees. Decide whether you want to be liked or admired. Decide if fitting in is more important than finding out what you’re doing here. Believe in kissing.
+					        			</p>
+										</div>
 
-							{/* <div className="post-category">
-								<span><i className="fa fa-picture-o"></i></span>
-							</div> */}
-
-						</div>{/* /.col-sm-2 */}
-
-						<div className="col-sm-10">
-							<article className="post-content">
-								<figure className="featured-image">
-                {/* <Img fluid={data.coverimage.localFile.childImageSharp.fluid} /> */}
-								</figure>
-								
-								<h2 className="post-title">
-									<a href="#">{data.title.text}</a>
-								</h2>
-
-								{/* <p className="post-meta">
-									Posted by <a className="post-meta-element" href="#">Kim Nilson</a> | 
-									With <a className="comments" href="#comments">230 Comments</a> |
-									In <a href="#" className="categorys">Charity</a>
-								</p> */}
-								<p>
-									<strong>{data.description}</strong>
-								</p>
-                <SliceZone allSlices={data.body} />
-							</article> {/* /.post-content */}
-						</div>{/* /.col-sm-10 */}
-					</div>{/* /#post-box */}{/* /.row */}
-					{/* Post Box End */}
-					<hr />
-
-					
-				</div>{/* /#blog-section */}	
-
-
-				<aside id="blog-sidebar" className="col-md-4 blog-sidebar">
-					<div className="widget clearfix">
-						<h3 className="title">
-							Categorii
-						</h3>
-
-						<ul className="widget-content">
-            <Categories categories={categories} />
-						</ul>{/* /.widget-content */}
-					</div>{/* /.widget */}
-
-
-
-			
-
-
-				</aside>{/* /#blog-sidebar */}		
-			</div> {/* /.row */}
-		</div>{/* /.container */}
-
-
-
-		{/* Scroll to Top */}
-		<div id="scroll-to-top">
-			<div className="hex scroll-top">
-				<span><i className="fa fa-chevron-up"></i></span>
-			</div>
-		</div>{/* /#scroll-to-top */}
-		{/* Scroll to Top End*/}
-      </React.Fragment>
-    </Layout>
-  )
+										{/* <div className="widget">
+											<h3 className="wg-title">Categorii</h3>
+											<ul>
+												
+											</ul>
+										</div> */}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</React.Fragment>
+		</Layout>
+	)
 }
 
 export default Post
 
 Post.propTypes = {
-  data: PropTypes.shape({
-    prismicPost: PropTypes.object.isRequired,
-  }).isRequired,
-  location: PropTypes.object.isRequired,
+	data: PropTypes.shape({
+		prismicPost: PropTypes.object.isRequired,
+	}).isRequired,
+	location: PropTypes.object.isRequired,
 }
 
 // The typenames come from the slice names

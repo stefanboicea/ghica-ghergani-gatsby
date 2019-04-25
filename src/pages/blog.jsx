@@ -1,15 +1,59 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-// import { TopSection, AboutSection, AboutParalaxSection, CausesSection, TestimonalSection, EventsSection, PricingSection, ServiceSection, VolunteerSection, NewsSection, Gallery, ClientsSection, ContactSection, TeamSection } from '../components/Section';
 import { Layout, Listing, Wrapper, SliceZone, Title, SEO, Header } from '../components'
 import website from '../../config/website'
+import Categories from '../components/Listing/Categories'
 
 class Blog extends Component {
   render() {
     const {
       data: { posts },
-    } = this.props
+		} = this.props
+		
+		
+		const categorySet = new Set()
+		const postList = posts.edges
+		postList.forEach(edge => {
+			if (edge.node.data.categories[0].category) {
+				edge.node.data.categories.forEach(cat => {
+					categorySet.add(cat.category.document[0].data.name)
+				})
+			}
+		})
+
+		const categories = Array.from(categorySet)
+		let items = []
+		for (const [index, item] of postList.entries()) {
+			const post = item.node
+			const link = '/blog/' + post.uid
+			items.push(
+		 <div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12" key={index}>
+											<div className="blog-wrapper">
+												<div className="entry-header">
+													<h2 className="entry-title"><a href={link}>{post.data.title.text}</a></h2>
+													<div className="entry-meta cms-meta">
+														<ul className="list-unstyled list-inline">
+															<li className="detail-date"><a href="#">{post.date}</a></li>
+															{/* <li className="detail-author"><a href="#">admin</a></li>
+															<li className="detail-terms"><a href="#">Featured</a></li>
+															<li className="detail-comment"><a href="#">0 Comments</a></li> */}
+														</ul>
+													</div>
+												</div>
+												<div className="entry-content">
+													<div className="entry-media">
+														<img width="1000" height="676" src={post.data.coverimage.url} alt="" />
+													</div>
+												</div>
+											</div>
+										</div> 
+			)
+		}
+
+
+
+
     return (
       <Layout customSEO>
         <SEO
@@ -36,116 +80,17 @@ class Blog extends Component {
 							<div className="col-sm-12 col-md-8 col-lg-8 mb-5">
 								<div className="cms-blog cms-blog-standard grid-1">
 									<div className="cms-isotope-grid-post row clearfix">
-										<div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="blog-wrapper">
-												<div className="entry-header">
-													<h2 className="entry-title"><a href="blog-detail.html">Enjoying the small things</a></h2>
-													<div className="entry-meta cms-meta">
-														<ul className="list-unstyled list-inline">
-															<li className="detail-date"><a href="#">June 5, 2015</a></li>
-															<li className="detail-author"><a href="#">admin</a></li>
-															<li className="detail-terms"><a href="#">Featured</a></li>
-															<li className="detail-comment"><a href="#">0 Comments</a></li>
-														</ul>
-													</div>
-												</div>
-												<div className="entry-content">
-													<div className="entry-media">
-														<img width="1000" height="676" src="../images/blog/blog_770x520.jpg" alt="" />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="blog-wrapper">
-												<div className="entry-header">
-													<h2 className="entry-title"><a href="blog-detail.html">Riding around on my bicycle</a></h2>
-													<div className="entry-meta cms-meta">
-														<ul className="list-unstyled list-inline">
-															<li className="detail-date"><a href="#">June 5, 2015</a></li>
-															<li className="detail-author"><a href="#">admin</a></li>
-															<li className="detail-terms"><a href="#">Featured</a></li>
-															<li className="detail-comment"><a href="#">0 Comments</a></li>
-														</ul>
-													</div>
-												</div>
-												<div className="entry-content">
-													<div className="entry-media">
-														<img width="1000" height="676" src="../images/blog/blog_770x520.jpg" alt="" />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="blog-wrapper">
-												<div className="entry-header">
-													<h2 className="entry-title"><a href="blog-detail.html">My summer trip recap</a></h2>
-													<div className="entry-meta cms-meta">
-														<ul className="list-unstyled list-inline">
-															<li className="detail-date"><a href="#">June 5, 2015</a></li>
-															<li className="detail-author"><a href="#">admin</a></li>
-															<li className="detail-terms"><a href="#">Featured</a></li>
-															<li className="detail-comment"><a href="#">0 Comments</a></li>
-														</ul>
-													</div>
-												</div>
-												<div className="entry-content">
-													<div className="entry-media">
-														<img width="1000" height="676" src="../images/blog/blog_770x520.jpg" alt="" />
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="blog-wrapper">
-												<div className="entry-header">
-													<h2 className="entry-title"><a href="blog-detail.html">Lost in New Zealand</a></h2>
-													<div className="entry-meta cms-meta">
-														<ul className="list-unstyled list-inline">
-															<li className="detail-date"><a href="#">June 5, 2015</a></li>
-															<li className="detail-author"><a href="#">admin</a></li>
-															<li className="detail-terms"><a href="#">Inspiration</a></li>
-															<li className="detail-comment"><a href="#">0 Comments</a></li>
-														</ul>
-													</div>
-												</div>
-												<div className="entry-content">
-													<div className="entry-media">
-														<iframe src="https://player.vimeo.com/video/127360181" width="625" height="352" allowFullScreen></iframe>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="cms-grid-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="blog-wrapper">
-												<div className="entry-header">
-													<h2 className="entry-title"><a href="blog-detail.html">Are You With Me (Remix)</a></h2>
-													<div className="entry-meta cms-meta">
-														<ul className="list-unstyled list-inline">
-															<li className="detail-date"><a href="#">June 5, 2015</a></li>
-															<li className="detail-author"><a href="#">admin</a></li>
-															<li className="detail-terms"><a href="#">Inspiration</a></li>
-															<li className="detail-comment"><a href="#">0 Comments</a></li>
-														</ul>
-													</div>
-												</div>
-												<div className="entry-content">
-													<div className="entry-media">
-														<iframe height="166" src="https://w.soundcloud.com/player?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F190445096&amp;visual=true&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-													</div>
-												</div>
-											</div>
-										</div>
+								
+								{items}
+								
 									</div>
-									<div className="cs_pagination">
-										<div id="cshero-load-posts"><a href="javascript:void(0)" className="btn btn-default">Load More</a></div>
-									</div>            
+									         
 					            </div>
 					        </div>
 					        <div id="page-sidebar" className="col-sm-12 col-md-4 col-lg-4">
 					        	<div id="secondary" className="widget-area">
 					        		<div className="widget">
-					        			<h3 className="wg-title">OUR DAILY INSPIRATIONS</h3>
+					        			<h3 className="wg-title">Inspiratiile noastre zilnice</h3>
 					        			<p>
 					        				Cherish your solitude. Take trains by yourself to places you have never been. Sleep out alone under the stars. Learn how to drive a stick shift. Go so far away that you stop being afraid of not coming back. Say no when you don’t want to do something. Say yes if your instincts are strong, even if everyone around you disagrees. Decide whether you want to be liked or admired. Decide if fitting in is more important than finding out what you’re doing here. Believe in kissing.
 					        			</p>
@@ -198,16 +143,7 @@ class Blog extends Component {
 					        		<div className="widget">
 					        			<h3 className="wg-title">Categorii</h3>
 					        			<ul>
-					        				<li><a href="#">Clients</a></li>
-					        				<li><a href="#">Featured</a></li>
-					        				<li><a href="#">Inspiration</a></li>
-					        				<li><a href="#">Music</a></li>
-					        				<li><a href="#">Offers</a></li>
-					        				<li><a href="#">Photography</a></li>
-					        				<li><a href="#">Portfolio</a></li>
-					        				<li><a href="#">Post Format</a></li>
-					        				<li><a href="#">Testimonials</a></li>
-					        				<li><a href="#">Travel</a></li>
+												<Categories categories={categories} />
 					        			</ul>
 					        		</div>
 					        		{/* <div className="widget widget_tag_cloud">

@@ -8,11 +8,11 @@ const Content = styled.div`
   padding-bottom: 1.5rem;
 `
 
-const Image = ({ input }) => (
-  <Content>
-    <Img fluid={input.primary.image.localFile.childImageSharp.fluid} />
-  </Content>
-)
+const Image = ({ input }) =>{
+  return  <img src={input.primary.image.url} ></img>
+  
+
+  }
 
 export default Image
 

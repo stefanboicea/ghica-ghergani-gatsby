@@ -6,11 +6,16 @@ const BlockQuote = styled.blockquote`
   max-width: ${props => props.theme.maxWidthText};
 `
 
-const Quote = ({ input }) => (
+const Quote = ({ input }) => {
+  if (!input.primary.quote_text) return null
+
+  return
+
   <BlockQuote>
     <div dangerouslySetInnerHTML={{ __html: input.primary.quote_text.html }} />
   </BlockQuote>
-)
+
+}
 
 export default Quote
 

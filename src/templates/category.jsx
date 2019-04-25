@@ -22,7 +22,7 @@ const Category = ({
       
         {totalCount} {totalCount === 1 ? 'Post' : 'Posts'} {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
       
-      <Listing posts={edges} />
+      {/* <Listing posts={edges} /> */}
     </CatWrapper>
   </Layout>
 )

@@ -11,9 +11,7 @@ import Img from 'gatsby-image'
 
 const Page = ({ data: { prismicPage, posts }, location }) => {
 	const { data } = prismicPage
-	console.log(data)
 
-	
 
   return (
     <Layout customSEO>

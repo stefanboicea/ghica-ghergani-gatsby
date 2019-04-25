@@ -4,7 +4,7 @@ module.exports = {
   titleAlt: 'Ghica Ghergani', // Title for JSONLD
   description: 'Domeniul Ghergani',
   headline: 'Domeniul Ghica Ghergani', // Headline for schema.org JSONLD
-  url: 'https://prismic.lekoarts.de', // Domain of your site. No trailing slash!
+  url: 'https://ghica-ghergani.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   logo: '/logos/logo-1024.png', // Used for SEO
   ogLanguage: 'ro_RO', // Facebook Language

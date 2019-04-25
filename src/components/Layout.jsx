@@ -26,7 +26,7 @@ const PureLayout = ({ children, data, customSEO }) => (
             <div id="cms-header" className="cms-header header-default header-ontop no-sticky clearfix">
               <div className="container">
                 <div id="cms-header-logo" className="main-navigation pull-left">
-                  <a href="./">
+                  <a href={'/'}>
                     <img alt="" src="../images/logo.png" />
                   </a>
                 </div>
@@ -45,50 +45,18 @@ const PureLayout = ({ children, data, customSEO }) => (
                     <div className="cms-menu pull-right">
                       <div className="menu-main-menu-container">
                         <ul className="nav-menu">
-                          <li><a href="./">Acasa</a></li>
+                          <li><a href={'/'}>Acasa</a></li>
                           <li>
-                            <a href="./despre">Despre noi</a>
+                            <a href={'/despre'}>Despre noi</a>
                           </li>
                           <li>
-                            <a href="./servicii">Servicii</a>
+                            <a href={'/servicii'}>Servicii</a>
                           </li>
-                          {/* <li className="current_page_item menu-item-has-children">
-                            <a href="our-portfolio.html">Portfolio</a>
-                            <ul className="sub-menu">
-                              <li className="menu-item-has-children">
-                                <a href="#" className="">Grid Layout</a>
-                                <ul className="sub-menu">
-                                  <li><a href="portfolio-2-columns.html">Standard 2 columns</a></li>
-                                  <li><a href="portfolio-3-columns.html">Standard 3 columns</a></li>
-                                  <li><a href="portfolio-3-columns-no-space.html">Full-width 3 columns</a></li>
-                                  <li><a href="4-columns-full-width.html">Full-width 4 columns</a></li>
-                                </ul>
-                              </li>
-                              <li className="current_page_item menu-item-has-children">
-                                <a href="#">Grid Without Space</a>
-                                <ul className="sub-menu">
-                                  <li><a href="3-columns-no-space-full-width.html">Full-width 3 columns (No spaces)</a></li>
-                                  <li><a href="4-columns-no-space-full-width.html">Full-width 4 columns (No spaces)</a></li>
-                                </ul>
-                              </li>
-                              <li className="menu-item-has-children">
-                                <a href="#">Single Layout</a>
-                                <ul className="sub-menu">
-                                  <li><a href="portfolio-standard.html">Standard</a></li>
-                                  <li><a href="portfolio-full-width.html">Full-width</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li> */}
-                          <li className="menu-item-has-children">
-                            <a href="/blog">Blog</a>
+                          <li >
+                            <a href={'blog'}>Blog</a>
                           </li>
-                          <li className="menu-item-has-children">
-                            <a href="#">Contact</a>
-                            <ul className="sub-menu">
-                              <li><a href="contact-us.html">Contact Us 1</a></li>
-                              <li><a href="contact-us-2.html">Contact Us 2</a></li>
-                            </ul>
+                          <li >
+                            <a href={'/contact'}>Contact</a>
                           </li>
                         </ul>
                       </div>
