@@ -58,7 +58,6 @@ class Blog extends Component {
       <Layout customSEO>
         <SEO
           title={`${website.titleAlt}`}
-          pathname={location.pathname}
           desc={website.description}
         />
         <React.Fragment>
