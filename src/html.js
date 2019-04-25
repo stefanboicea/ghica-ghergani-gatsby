@@ -31,7 +31,7 @@ export default function HTML(props) {
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
         </noscript>
-        
+
         <div
           key={`body`}
           id="___gatsby"
@@ -43,14 +43,30 @@ export default function HTML(props) {
         <script type='text/javascript' src={'/js/jquery.min.js'}></script>
         <script type='text/javascript' src={'/js/jquery-migrate.min.js'}></script>
         <script type='text/javascript' src={'/js/bootstrap.min.js'}></script>
+        <script type='text/javascript' src={'/js/jquery.themepunch.tools.min.js'}></script>
+        <script type='text/javascript' src={'/js/jquery.themepunch.revolution.min.js'}></script>
         <script type='text/javascript' src={'/js/wow.min.js'}></script>
         <script type='text/javascript' src={'/js/jquery.parallax-1.1.3.js'}></script>
         <script type='text/javascript' src={'/js/mobile-menu.js'}></script>
         <script type='text/javascript' src={'/js/jquery.prettyPhoto.js'}></script>
         <script type='text/javascript' src={'/js/waypoints.min.js'}></script>
+        <script type='text/javascript' src={'/js/modernizr.min.js'}></script>
         <script type='text/javascript' src={'/js/jquery.countTo.js'}></script>
         <script type="text/javascript" src={'/js/bootstrap-progressbar.min.js'}></script>
-		    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
+        <script type='text/javascript' src={'/js/jquery.imagesloaded.js'}></script>
+        <script type='text/javascript' src={'/js/jquery.shuffle.js'}></script>
+        <script type='text/javascript' src={'/js/jquery.shuffle.init.js'}></script>
+
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.video.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.slideanims.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.actions.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.layeranimation.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.kenburn.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.navigation.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.migration.min.js'}></script>
+        <script type='text/javascript' src={'/js/extensions/revolution.extension.parallax.min.js'}></script>
+
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
 
       </body>
     </html>

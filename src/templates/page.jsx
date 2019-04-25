@@ -71,6 +71,10 @@ export const pageQuery = graphql`
 					url
 				}
 				page_content {
+					... on PrismicPagePageContentBigSlider {
+						slice_type
+						id
+					}
 					... on PrismicPagePageContentVideoRow {
 						slice_type
 						id

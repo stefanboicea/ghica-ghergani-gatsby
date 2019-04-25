@@ -9,5 +9,6 @@ import Clients from './Clients'
 import FullWidthImage from './FullWidthImage'
 import FancyRow from './FancyRow'
 import VideoRow from './VideoRow'
+import BigSlider from './BigSlider'
 
-export { Image, CodeBlock, BodyText, Quote, Team, Clients, ImageHighlight, QuoteDescription, FullWidthImage,FancyRow,VideoRow }
+export { Image, CodeBlock, BodyText, Quote, Team, Clients, ImageHighlight, QuoteDescription, FullWidthImage,FancyRow,VideoRow,BigSlider }
