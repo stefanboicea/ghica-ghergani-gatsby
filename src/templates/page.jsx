@@ -97,6 +97,15 @@ export const pageQuery = graphql`
 							subtitle1
 						}
 					}
+					... on PrismicPagePageContentQuote {
+						slice_type
+						id
+						primary {
+							quote_text {
+								text
+							}
+						}
+					}
 					... on PrismicPagePageContentQuoteDetail {
 						slice_type
 						id
