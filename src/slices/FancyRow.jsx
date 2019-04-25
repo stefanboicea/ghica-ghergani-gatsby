@@ -11,7 +11,8 @@ const FancyRow = ({ input }) => {
                     <div className="cms-fancybox-item">
                         <div className="fancy-box-icon pull-left">
                             <div className="fancy-box-icon-inner">
-                                <i className="pe-7s-coffee"></i>
+                            <img src={item.icon.url} ></img>
+                                {/* <i className="pe-7s-coffee"></i> */}
                             </div>
                         </div>
                         <div className="fancy-box-content-wrap has-icon-image">
