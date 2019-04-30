@@ -104,7 +104,26 @@ export const pageQuery = graphql`
 							quote_text 
 						}
 					}
-
+					... on PrismicPagePageContentImageGallery {
+						slice_type
+						id
+						primary {
+							gallery_title {
+								text
+							}
+						}
+						items {
+							image_description {
+								text
+							}
+							image {
+								url
+							}
+							link_label {
+								text
+							}
+						}
+					}
 					... on PrismicPagePageContentQuoteDetail {
 						slice_type
 						id

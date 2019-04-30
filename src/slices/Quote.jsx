@@ -9,9 +9,7 @@ const BlockQuote = styled.blockquote`
 const Quote = ({ input }) => {
   if (!input.primary.quote_text) return null
 
-  return
-
-  <BlockQuote>
+  return <BlockQuote>
     <div dangerouslySetInnerHTML={{ __html: input.primary.quote_text.html }} />
   </BlockQuote>
 

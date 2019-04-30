@@ -11,5 +11,6 @@ import FullWidthImage from './FullWidthImage'
 import FancyRow from './FancyRow'
 import VideoRow from './VideoRow'
 import BigSlider from './BigSlider'
+import ImageGallery from './ImageGallery'
 
-export { Image, CodeBlock, BodyText, Quote, Team, Clients, ImageHighlight, QuoteDescription, FullWidthImage,FancyRow,VideoRow,BigSlider,QuoteNoDescription }
+export { Image, CodeBlock, BodyText, Quote, Team, Clients, ImageHighlight, QuoteDescription, FullWidthImage,FancyRow,VideoRow,BigSlider,QuoteNoDescription,ImageGallery }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import { BodyText, CodeBlock, Image, Quote, QuoteDescription, Team, Clients, ImageHighlight, FullWidthImage, FancyRow, VideoRow, BigSlider, QuoteNoDescription } from '../slices'
+import { BodyText, CodeBlock, Image, Quote, QuoteDescription, Team, Clients, ImageHighlight, FullWidthImage, FancyRow, VideoRow, BigSlider, QuoteNoDescription, ImageGallery } from '../slices'
 
 
 
@@ -42,6 +42,8 @@ export default class SliceZone extends Component {
           return <VideoRow key={s.id} input={s} />
         case 'big_slider':
           return <BigSlider key={s.id} input={s} />
+          case 'image_gallery':
+          return <ImageGallery key={s.id} input={s} />
         default:
           return null
       }
