@@ -11,12 +11,13 @@ const BigSlider = ({ input }) => (
                             <ul>
 
                                 <li data-transition="random" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide">
-                                    <img src="../images/banner/banner_1920x960.jpg" alt=""
+                                    <img src={'/images/banner/banner_1920x960.jpg'} alt=""
                                         data-bgposition="center top"
                                         data-bgfit="cover"
                                         data-bgrepeat="no-repeat" />
+                                      
 
-                                    <div className="tp-caption slide-layer logo-layer"
+                                    {/* <div className="tp-caption slide-layer logo-layer"
                                         data-x="['center','center','center','center']"
                                         data-hoffset="['-3','-3','-3','-3']"
                                         data-y="['center','center','center','center']"
@@ -29,7 +30,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_1.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_1.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer text-layer"
@@ -45,7 +46,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_2.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_2.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer"
@@ -61,7 +62,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_line.jpg" alt="" />
+                                        <img src={'/images/banner/banner_line.jpg'} alt="" />
                                     </div>
 
                                     <div className="tp-caption playfair-display-italic-white-20 tp-resizeme"
@@ -101,14 +102,16 @@ const BigSlider = ({ input }) => (
                                         data-end="8600">
                                         <a href='#'>PURCHASE THEME</a>
                                     </div>
+                                 */}
                                 </li>
+                                
                                 <li data-transition="random" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide">
-                                    <img src="../images/banner/banner_1920x960.jpg" alt=""
+                                    <img src={'/images/banner/banner_1920x960.jpg'} alt=""
                                         data-bgposition="center top"
                                         data-bgfit="cover"
                                         data-bgrepeat="no-repeat" />
 
-                                    <div className="tp-caption slide-layer logo-layer"
+                                    {/* <div className="tp-caption slide-layer logo-layer"
                                         data-x="['center','center','center','center']"
                                         data-hoffset="['-3','-3','-3','-3']"
                                         data-y="['center','center','center','center']"
@@ -121,7 +124,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_3.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_3.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer text-layer"
@@ -137,7 +140,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_4.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_4.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer"
@@ -153,7 +156,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_line.jpg" alt="" />
+                                        <img src={'/images/banner/banner_line.jpg'} alt="" />
                                     </div>
 
                                     <div className="tp-caption playfair-display-italic-white-20 tp-resizeme"
@@ -174,14 +177,16 @@ const BigSlider = ({ input }) => (
                                         data-end="8600">
                                         Far far away, behind the word mountains, far from the countries Vokalia and <br />Consonantia, there live the blind texts. Separated they live.
 												</div>
+                                 */}
                                 </li>
+                                
                                 <li data-transition="random" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide">
-                                    <img src="../images/banner/banner_1920x960.jpg" alt=""
+                                    <img src={'/images/banner/banner_1920x960.jpg'} alt=""
                                         data-bgposition="center top"
                                         data-bgfit="cover"
                                         data-bgrepeat="no-repeat" />
 
-                                    <div className="tp-caption slide-layer logo-layer"
+                                    {/* <div className="tp-caption slide-layer logo-layer"
                                         data-x="['center','center','center','center']"
                                         data-hoffset="['-3','-3','-3','-3']"
                                         data-y="['center','center','center','center']"
@@ -194,7 +199,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_5.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_5.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer text-layer"
@@ -210,7 +215,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_layer_6.png" alt="" />
+                                        <img src={'/images/banner/banner_layer_6.png'} alt="" />
                                     </div>
 
                                     <div className="tp-caption slide-layer"
@@ -226,7 +231,7 @@ const BigSlider = ({ input }) => (
                                         data-basealign="slide"
                                         data-responsive_offset="on"
                                         data-end="8600">
-                                        <img src="../images/banner/banner_line.jpg" alt="" />
+                                        <img src={'/images/banner/banner_line.jpg'} alt="" />
                                     </div>
 
                                     <div className="tp-caption playfair-display-italic-white-20 tp-resizeme"
@@ -247,6 +252,7 @@ const BigSlider = ({ input }) => (
                                         data-end="8600">
                                         Far far away, behind the word mountains, far from the countries Vokalia and <br />Consonantia, there live the blind texts. Separated they live.
 												</div>
+                                 */}
                                 </li>
                             </ul>
                             <div className="tp-bannertimer tp-bottom"></div>

@@ -24,7 +24,7 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
       />
       <React.Fragment>
       <div id="main" className="main clearfix">
-				<div id="page-title" className="page-title" style={{backgroundImage: 'url(' + data.coverimage.url   +')'}}>
+				{data.title.text !== 'Acasa' && <div id="page-title" className="page-title" style={{backgroundImage: 'url(' + data.coverimage.url   +')'}}>
 					<div className="container">
 						<div className="row">
 							<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
@@ -33,7 +33,7 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
 							</div>
 						</div>
 					</div>
-				</div>
+			</div> }
 				<div className="section">
 					<div className="container-fluid">
 					<SliceZone allSlices={data.page_content} />

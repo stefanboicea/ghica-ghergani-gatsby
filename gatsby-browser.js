@@ -8,7 +8,6 @@ exports.onInitialClientRender = () => {
 }
 
 exports.onRouteUpdate = () => {
-  console.log('route update');
   jQuery(document).ready(function ($) {
     "use strict";
 
@@ -346,24 +345,6 @@ exports.onRouteUpdate = () => {
       }
     }
 
-    /**
-     * One page
-     */
-    if (one_page == true && $('.onepage').length > 0) {
-
-      $('body').on('click', '.onepage', function () {
-        $('#cms-menu-mobile').removeClass('close-open');
-        $('#cms-header-navigation').removeClass('open-menu');
-        $('.cms-menu-close').removeClass('open');
-      });
-
-      var one_page_options = { 'filter': '.onepage' };
-
-      $('#site-navigation').singlePageNav({ offset: $('.single-page-nav').outerHeight() + 150, filter: '.onepage' });
-      $('#site-navigation-2').singlePageNav({ offset: $('.single-page-nav').outerHeight() + 150, filter: '.onepage' });
-      $('#site-navigation-mobile').singlePageNav({ offset: $('.single-page-nav').outerHeight() + 150, filter: '.onepage' });
-      $('#cms-onepage-nav').singlePageNav(one_page_options);
-    }
 
     /**
      * Full page
@@ -578,46 +559,5 @@ exports.onRouteUpdate = () => {
       });
     });
 
-    $('.cms-carousel-photography').each(function () {
-      var el = $(this);
-      el.owlCarousel({
-        items: 5,
-        itemsDesktop: [1199, 5],
-        itemsDesktopSmall: [979, 3],
-        itemsTablet: [767, 3],
-        itemsMobile: [480, 2],
-        slideSpeed: 500,
-        paginationSpeed: 1000,
-        rewindSpeed: 1000,
-        autoHeight: false,
-        addClassActive: true,
-        autoPlay: false,
-        loop: true,
-        pagination: false
-      });
-    });
-
-    $('.cms-carousel-gallery').each(function () {
-      var el = $(this);
-      el.owlCarousel({
-        items: 6,
-        itemsDesktop: [1199, 6],
-        itemsDesktopSmall: [979, 4],
-        itemsTablet: [767, 3],
-        itemsMobile: [480, 2],
-        slideSpeed: 500,
-        paginationSpeed: 1000,
-        rewindSpeed: 1000,
-        autoHeight: false,
-        addClassActive: true,
-        autoPlay: true,
-        loop: true,
-        pagination: false
-      });
-    });
-
-    $(".icon_cart_wrap").on('click', function () {
-      $(".shopping_cart_dropdown").toggleClass("active");
-    });
   });
 };
