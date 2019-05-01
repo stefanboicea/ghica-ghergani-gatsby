@@ -1,8 +1,9 @@
 const font = require("./css/font-awesome.min.css")
 const stroke = require("./css/pe-icon-7-stroke.css")
-const pretty = require( "./css/prettyPhoto.css")
-const main = require( "./css/main.css")
-const custom = require( "./css/custom.css")
+const pretty = require("./css/prettyPhoto.css")
+const main = require("./css/main.css")
+const custom = require("./css/custom.css")
+const settings = require("./css/settings.css")
 
 exports.onInitialClientRender = () => {
   // dirty fix for missing popstate listener
@@ -20,30 +21,7 @@ exports.onRouteUpdate = () => {
 
     jQuery('#rev_slider_1_1').show().revolution(
       {
-    //           lazyType: "none",
-    //   shadow: 0,
-    //   spinner: "spinner3",
-    //   stopLoop: "off",
-    //   stopAfterLoops: -1,
-    //   stopAtSlide: -1,
-    //   shuffle: "off",
-    //   autoHeight: "off",
-    //   fullScreenAutoWidth: "off",
-    //   fullScreenAlignForce: "off",
-    //   fullScreenOffsetContainer: "",
-    //   fullScreenOffset: "",
-    //   hideThumbsOnMobile: "off",
-    //   hideSliderAtLimit: 0,
-    //   hideCaptionAtLimit: 0,
-    //   hideAllCaptionAtLilmit: 0,
-    //   debugMode: false,
-    //         dottedOverlay: "twoxtwo",
-    //   sliderType: "standard",
-    //   sliderLayout: "fullscreen",
-    //   dottedOverlay: "none",
-    //     delay: 4000,
-    //   }
-    // );
+       
       dottedOverlay: "twoxtwo",
       sliderType: "standard",
       sliderLayout: "fullscreen",
@@ -113,10 +91,10 @@ exports.onRouteUpdate = () => {
       }
     });
 
-    
+
     /* pretty photo */
 
-    
+
     $("a[data-rel^='prettyPhoto']").prettyPhoto();
     $("a.prettyphoto").prettyPhoto();
     $("a[data-rel^='prettyPhoto']").prettyPhoto({ hook: "data-rel", social_tools: !1, theme: "pp_default", horizontal_padding: 20, opacity: .8, deeplinking: !1 });
@@ -170,38 +148,38 @@ exports.onRouteUpdate = () => {
     /**
      * window load event.
      */
-    
 
-      $(".noo-spinner").remove();
-      $("#cms-page").css("opacity", "1");
 
-      /** current scroll */
-      scroll_top = $(window).scrollTop();
+    $(".noo-spinner").remove();
+    $("#cms-page").css("opacity", "1");
 
-      /** current window width */
-      window_width = $(window).width();
+    /** current scroll */
+    scroll_top = $(window).scrollTop();
 
-      /** current window height */
-      window_height = $(window).height();
+    /** current window width */
+    window_width = $(window).width();
 
-      /* get Header height */
-      header_top = header.length > 0 ? header.outerHeight(true) : 0;
+    /** current window height */
+    window_height = $(window).height();
 
-      /* check sticky menu. */
-      if (menu_sticky == '1') {
-        cms_stiky_menu(scroll_top);
-      }
+    /* get Header height */
+    header_top = header.length > 0 ? header.outerHeight(true) : 0;
 
-      /* check mobile menu */
-      cms_mobile_menu();
+    /* check sticky menu. */
+    if (menu_sticky == '1') {
+      cms_stiky_menu(scroll_top);
+    }
 
-      /* check back to top */
-      if (back_to_top == '1') {
-        /* add html. */
-        $('body').append('<div id="back_to_top" class="back_to_top"><span class="go_up"><i style="" class="fa fa-arrow-up"></i></span></div><!-- #back-to-top -->');
-        cms_back_to_top();
-      }
-    
+    /* check mobile menu */
+    cms_mobile_menu();
+
+    /* check back to top */
+    if (back_to_top == '1') {
+      /* add html. */
+      $('body').append('<div id="back_to_top" class="back_to_top"><span class="go_up"><i style="" class="fa fa-arrow-up"></i></span></div><!-- #back-to-top -->');
+      cms_back_to_top();
+    }
+
 
     /**
      * reload event.

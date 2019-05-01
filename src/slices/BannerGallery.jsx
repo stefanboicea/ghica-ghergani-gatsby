@@ -5,15 +5,11 @@ const BannerGallery = ({ input }) => {
     let items = []
     for (const [index, item] of input.items.entries()) {
         items.push(
-            <li  data-slotamount="2" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" key={index}>
+            <li   data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" key={index}>
                 <img src={item.image.url} alt=""
                     data-bgposition="center top"
                     data-bgfit="cover"
                     data-bgrepeat="no-repeat" />
-
-
-
-
                 <div className="tp-caption playfair-display-italic-white-20 tp-resizeme"
                     data-x="['center','center','center','center']"
                     data-hoffset="['1','1','1','1']"
@@ -32,7 +28,6 @@ const BannerGallery = ({ input }) => {
                     data-end="8600">
                     Far far away, behind the word mountains, far from the countries Vokalia and <br />Consonantia, there live the blind texts. Separated they live.
                         </div>
-
                 <div className="tp-caption primary-button tp-resizeme"
                     data-x="['center','center','center','center']"
                     data-hoffset="['0','0','0','0']"
@@ -51,7 +46,6 @@ const BannerGallery = ({ input }) => {
                     data-end="8600">
                     <a href='#'>PURCHASE THEME</a>
                 </div>
-
             </li>
         )
     }
