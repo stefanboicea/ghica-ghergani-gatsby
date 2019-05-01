@@ -1,332 +1,478 @@
 {
-    "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "placeholder": "meaningful-unique-identifier...",
-          "label": "Unique ID"
-        }
-      },
-      "coverimage": {
-        "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "CoverImage"
-        }
-      },
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "single": "heading1",
-          "label": "title",
-          "placeholder": "Title"
-        }
-      },
-      "description": {
-        "type": "Text",
-        "config": {
-          "label": "description",
-          "placeholder": "Description for SEO tags"
-        }
-      },
-      "subtitle": {
-        "type": "Text",
-        "config": {
-          "label": "Subtitle"
-        }
-      },
-      "page_content": {
-        "type": "Slices",
-        "fieldset": "Slice zone",
-        "config": {
-          "choices": {
-            "text_section": {
-              "type": "Slice",
-              "fieldset": "Text Section",
-              "description": "Simple text section with either one or two columns",
-              "icon": "text_fields",
-              "non-repeat": {
-                "rich_text": {
-                  "type": "StructuredText",
-                  "config": {
-                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-                    "label": "Rich Text",
-                    "placeholder": "Text..."
-                  }
-                }
-              },
-              "repeat": {}
-            },
-            "quote": {
-              "type": "Slice",
-              "fieldset": "Quote",
-              "description": "A stylized quote",
-              "icon": "format_quote",
-              "non-repeat": {
-                "quote_text": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Quote Text"
-                  }
-                }
-              },
-              "repeat": {}
-            },
-            "full_width_image": {
-              "type": "Slice",
-              "fieldset": "Full Width Image",
-              "description": "A wide, thin image",
-              "icon": "broken_image",
-              "non-repeat": {
-                "headline": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Headline"
-                  }
-                },
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "constraint": {
-                      "width": 1920,
-                      "height": 400
-                    },
-                    "thumbnails": [],
-                    "label": "Image"
-                  }
-                }
-              },
-              "repeat": {}
-            },
-            "image_gallery": {
-              "type": "Slice",
-              "fieldset": "Image Gallery",
-              "description": "A collection of images, each with a description and an optional link",
-              "icon": "image",
-              "non-repeat": {
-                "gallery_title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading2, heading3",
-                    "label": "Gallery Title",
-                    "placeholder": "Image Gallery Title...",
-                    "isEverythingAuthorized": false,
-                    "authorized": [
-                      "heading2",
-                      "heading3",
-                      "text"
-                    ],
-                    "isAuthorized": {}
-                  }
-                }
-              },
-              "repeat": {
-                "image_description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Image Description",
-                    "placeholder": "Image description...",
-                    "isEverythingAuthorized": false,
-                    "authorized": [
-                      "paragraph",
-                      "text"
-                    ],
-                    "isAuthorized": {}
-                  }
-                },
-                "link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": "Optional Link"
-                  }
-                },
-                "link_label": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Link Label",
-                    "placeholder": "Optional Link Label",
-                    "isEverythingAuthorized": false,
-                    "authorized": [
-                      "paragraph",
-                      "text"
-                    ],
-                    "isAuthorized": {}
-                  }
-                },
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "constraint": {
-                      "width": 727,
-                      "height": 402
-                    },
-                    "thumbnails": [],
-                    "label": "Image"
-                  }
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "placeholder" : "meaningful-unique-identifier...",
+        "label" : "Unique ID"
+      }
+    },
+    "coverimage" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "CoverImage"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title",
+        "placeholder" : "Title"
+      }
+    },
+    "description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "description",
+        "placeholder" : "Description for SEO tags"
+      }
+    },
+    "subtitle" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Subtitle"
+      }
+    },
+    "page_content" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "text_section" : {
+            "type" : "Slice",
+            "fieldset" : "Text Section",
+            "description" : "Simple text section with either one or two columns",
+            "icon" : "text_fields",
+            "non-repeat" : {
+              "rich_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Rich Text",
+                  "placeholder" : "Text..."
                 }
               }
             },
-            "image_highlight": {
-              "type": "Slice",
-              "fieldset": "Image Highlight",
-              "description": "A section to highlight an image with title, text, and optional link",
-              "icon": "star",
-              "non-repeat": {
-                "featured_image": {
-                  "type": "Image",
-                  "config": {
-                    "constraint": {
-                      "width": 570,
-                      "height": 300
-                    },
-                    "thumbnails": [],
-                    "label": "Featured Image"
-                  }
-                },
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading2",
-                    "label": "Image Title",
-                    "placeholder": "Featured Title..."
-                  }
-                },
-                "headline": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading3",
-                    "label": "Image Headline",
-                    "placeholder": "Featured Headline..."
-                  }
-                },
-                "link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Featured Link",
-                    "placeholder": "Optional Link"
-                  }
-                },
-                "link_label": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Featured Link Label",
-                    "placeholder": "Optional Link Label"
-                  }
-                }
-              },
-              "repeat": {}
-            },
-            "team": {
-              "type": "Slice",
-              "fieldset": "Team",
-              "description": "Section for team member information with portrait",
-              "icon": "person_pin",
-              "non-repeat": {
-                "team_section": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading2",
-                    "label": "Team Section",
-                    "placeholder": "Management"
-                  }
-                }
-              },
-              "repeat": {
-                "first_and_lastname": {
-                  "type": "StructuredText",
-                  "config": {
-                    "multi": "heading3",
-                    "label": "First and LastName",
-                    "placeholder": "John Doe"
-                  }
-                },
-                "position": {
-                  "type": "StructuredText",
-                  "config": {
-                    "multi": "paragraph",
-                    "label": "Position",
-                    "placeholder": "Design director"
-                  }
-                },
-                "portrait": {
-                  "type": "Image",
-                  "config": {
-                    "constraint": {
-                      "width": 1000,
-                      "height": 1000
-                    },
-                    "thumbnails": [
-                      {
-                        "name": "Mobile",
-                        "width": 500,
-                        "height": 500
-                      }
-                    ],
-                    "label": "Portrait"
-                  }
+            "repeat" : { }
+          },
+          "quote" : {
+            "type" : "Slice",
+            "fieldset" : "Quote",
+            "description" : "A stylized quote",
+            "icon" : "format_quote",
+            "non-repeat" : {
+              "quote_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Quote Text"
                 }
               }
             },
-            "clients" : {
-                "type": "Slice",
-                "fieldset": "Clients",
-                "description": "Section for clients information",
-                "icon": "person_pin",
-                "non-repeat": {
-                  "clients_section": {
-                    "type": "StructuredText",
-                    "config": {
-                      "single": "heading2",
-                      "label": "Clients Section",
-                      "placeholder": "Clients"
-                    }
-                  }
-                },
-                "repeat": {
-                  "full_name": {
-                    "type": "StructuredText",
-                    "config": {
-                      "multi": "heading3",
-                      "label": "Client Full Name",
-                      "placeholder": "Mercedes"
-                    }
+            "repeat" : { }
+          },
+          "full_width_image" : {
+            "type" : "Slice",
+            "fieldset" : "Full Width Image",
+            "description" : "A wide, thin image",
+            "icon" : "broken_image",
+            "non-repeat" : {
+              "headline" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Headline"
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : null,
+                    "height" : null
                   },
-                  "portrait": {
-                    "type": "Image",
-                    "config": {
-                      "constraint": {
-                        "width": 1000,
-                        "height": 1000
-                      },
-                      "thumbnails": [
-                        {
-                          "name": "Mobile",
-                          "width": 500,
-                          "height": 500
-                        }
-                      ],
-                      "label": "Portrait"
-                    }
-                  }
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
-             },
-            "title_subtitle": {
-              "type": "Slice",
-              "fieldset": "Title Subtitle",
-              "description": "Header and subtitle under the header full width",
-              "icon": "title",
-              "display": "list",
-              "non-repeat": {},
-              "repeat": {}
+              }
+            },
+            "repeat" : { }
+          },
+          "banner_gallery" : {
+            "type" : "Slice",
+            "fieldset" : "Banner Gallery",
+            "description" : "A collection of big images, designed for homepage",
+            "icon" : "image",
+            "non-repeat" : {
+            },
+            "repeat" : {
+              "image_description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Image Description",
+                  "placeholder" : "Image description...",
+                  "isEverythingAuthorized" : false,
+                  "authorized" : [ "paragraph", "text" ],
+                  "isAuthorized" : { }
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link",
+                  "placeholder" : "Optional Link"
+                }
+              },
+              "link_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Label",
+                  "placeholder" : "Optional Link Label",
+                  "isEverythingAuthorized" : false,
+                  "authorized" : [ "paragraph", "text" ],
+                  "isAuthorized" : { }
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
             }
+          },
+          "image_gallery" : {
+            "type" : "Slice",
+            "fieldset" : "Image Gallery",
+            "description" : "A collection of images, each with a description and an optional link",
+            "icon" : "image",
+            "non-repeat" : {
+              "gallery_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2, heading3",
+                  "label" : "Gallery Title",
+                  "placeholder" : "Image Gallery Title...",
+                  "isEverythingAuthorized" : false,
+                  "authorized" : [ "heading2", "heading3", "text" ],
+                  "isAuthorized" : { }
+                }
+              }
+            },
+            "repeat" : {
+              "image_description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Image Description",
+                  "placeholder" : "Image description...",
+                  "isEverythingAuthorized" : false,
+                  "authorized" : [ "paragraph", "text" ],
+                  "isAuthorized" : { }
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link",
+                  "placeholder" : "Optional Link"
+                }
+              },
+              "link_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Link Label",
+                  "placeholder" : "Optional Link Label",
+                  "isEverythingAuthorized" : false,
+                  "authorized" : [ "paragraph", "text" ],
+                  "isAuthorized" : { }
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 727,
+                    "height" : 402
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            }
+          },
+          "image_highlight" : {
+            "type" : "Slice",
+            "fieldset" : "Image Highlight",
+            "description" : "A section to highlight an image with title, text, and optional link",
+            "icon" : "star",
+            "non-repeat" : {
+              "featured_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 570,
+                    "height" : 300
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Featured Image"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Image Title",
+                  "placeholder" : "Featured Title..."
+                }
+              },
+              "headline" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Image Headline",
+                  "placeholder" : "Featured Headline..."
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Featured Link",
+                  "placeholder" : "Optional Link"
+                }
+              },
+              "link_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Featured Link Label",
+                  "placeholder" : "Optional Link Label"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "team" : {
+            "type" : "Slice",
+            "fieldset" : "Team",
+            "description" : "Section for team member information with portrait",
+            "icon" : "person_pin",
+            "non-repeat" : {
+              "team_section" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Team Section",
+                  "placeholder" : "Management"
+                }
+              }
+            },
+            "repeat" : {
+              "first_and_lastname" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading3",
+                  "label" : "First and LastName",
+                  "placeholder" : "John Doe"
+                }
+              },
+              "position" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Position",
+                  "placeholder" : "Design director"
+                }
+              },
+              "portrait" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1000,
+                    "height" : 1000
+                  },
+                  "thumbnails" : [ {
+                    "name" : "Mobile",
+                    "width" : 500,
+                    "height" : 500
+                  } ],
+                  "label" : "Portrait"
+                }
+              }
+            }
+          },
+          "clients" : {
+            "type" : "Slice",
+            "fieldset" : "Clients",
+            "description" : "Section for clients information",
+            "icon" : "person_pin",
+            "non-repeat" : {
+              "clients_section" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Clients Section",
+                  "placeholder" : "Clients"
+                }
+              }
+            },
+            "repeat" : {
+              "full_name" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading3",
+                  "label" : "Client Full Name",
+                  "placeholder" : "Mercedes"
+                }
+              },
+              "portrait" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1000,
+                    "height" : 1000
+                  },
+                  "thumbnails" : [ {
+                    "name" : "Mobile",
+                    "width" : 500,
+                    "height" : 500
+                  } ],
+                  "label" : "Portrait"
+                }
+              }
+            }
+          },
+          "title_subtitle" : {
+            "type" : "Slice",
+            "fieldset" : "Title Subtitle",
+            "description" : "Header and subtitle under the header full width",
+            "icon" : "title",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "fancy_row" : {
+            "type" : "Slice",
+            "fieldset" : "Fancy row",
+            "description" : "Fancy row with 2 services",
+            "icon" : "all_inclusive",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "icon" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Icon"
+                }
+              },
+              "title1" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Title"
+                }
+              },
+              "subtitle1" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Subtitle"
+                }
+              }
+            }
+          },
+          "quote_detail" : {
+            "type" : "Slice",
+            "fieldset" : "Quote Detail",
+            "description" : "Quote with description",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : {
+              "quote" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Quote"
+                }
+              },
+              "description1" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Description"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "video_row" : {
+            "type" : "Slice",
+            "fieldset" : "Video Row",
+            "description" : "Three column video row",
+            "icon" : "video_library",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "video_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Video Link",
+                  "placeholder" : "Link of the video"
+                }
+              },
+              "video_title" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Video Title",
+                  "placeholder" : "Title of the video"
+                }
+              },
+              "video_description" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Video Description",
+                  "placeholder" : "description of the video"
+                }
+              },
+              "read_more_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Read more Link"
+                }
+              }
+            }
+          },
+          "big_slider" : {
+            "type" : "Slice",
+            "fieldset" : "Big Slider",
+            "description" : "A very big slider like the one in the home demo",
+            "icon" : "visibility",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "quote_simple" : {
+            "type" : "Slice",
+            "fieldset" : "Quote Simple",
+            "description" : "simple quote",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : {
+              "quote_text" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Quote text"
+                }
+              }
+            },
+            "repeat" : { }
           }
         }
       }
     }
   }
+}
