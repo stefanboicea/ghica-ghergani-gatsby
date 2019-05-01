@@ -161,6 +161,7 @@ export const pageQuery = graphql`
 							featured_image {
 								url
 							}
+							position
 							title {
 								text
 							}

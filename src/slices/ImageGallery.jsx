@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 const ImageGallery = ({ input }) => {
     let items = []
     let sortedItems = input.items.sort((a,b)=> a.sort_order - b.sort_order)
-    console.log(sortedItems)
     
     // for (const [index, item] of sortedItems.entries()) {
         for(let index=0;index<sortedItems.length;index++) {

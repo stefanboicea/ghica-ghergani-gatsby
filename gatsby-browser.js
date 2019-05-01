@@ -95,7 +95,7 @@ exports.onRouteUpdate = () => {
       let $this = jQuery(this);
      let $filter = $this.parent().find('.cms-grid-filter');
       $this.imagesLoaded(function(){
-        console.log('loaded');
+
         $this.shuffle({
           itemSelector:'.cms-grid-item',
       });
@@ -540,6 +540,7 @@ exports.onRouteUpdate = () => {
           live: true        // default
         }
       );
+      console.log('animation');
       wow.init();
     }
 
