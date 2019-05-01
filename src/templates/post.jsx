@@ -27,7 +27,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 			/>
 			<React.Fragment>
 				<div id="main" className="main clearfix">
-					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(../images/background/background_1920x400.jpg)' }}>
+					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(../images/background/background_1920x400.jpg) !important' }}>
 						<div className="container">
 							<div className="row">
 								<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
@@ -39,6 +39,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 					<div className="section">
 						<div className="container">
 							<div className="row">
+              <div className="col-md-2 col-lg-2"></div>
 								<div className="col-sm-12 col-md-8 col-lg-8 mb-5">
 									<div className="single-post">
 										<article>
@@ -71,23 +72,6 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 												</span>
 											</div>
 										</article>
-									</div>
-								</div>
-								<div id="page-sidebar" className="col-sm-12 col-md-4 col-lg-4">
-									<div id="secondary" className="widget-area">
-										<div className="widget">
-											<h3 className="wg-title">OUR DAILY INSPIRATIONS</h3>
-											<p>
-												Cherish your solitude. Take trains by yourself to places you have never been. Sleep out alone under the stars. Learn how to drive a stick shift. Go so far away that you stop being afraid of not coming back. Say no when you don’t want to do something. Say yes if your instincts are strong, even if everyone around you disagrees. Decide whether you want to be liked or admired. Decide if fitting in is more important than finding out what you’re doing here. Believe in kissing.
-					        			</p>
-										</div>
-
-										{/* <div className="widget">
-											<h3 className="wg-title">Categorii</h3>
-											<ul>
-												
-											</ul>
-										</div> */}
 									</div>
 								</div>
 							</div>

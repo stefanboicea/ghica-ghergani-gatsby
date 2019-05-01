@@ -70,7 +70,8 @@ const BannerGallery = ({ input }) => {
                 </div>
             </div>
         </div>
-
+ <br ></br>
+ <br ></br>
     </React.Fragment>
 }
 

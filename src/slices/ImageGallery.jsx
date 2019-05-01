@@ -28,7 +28,7 @@ const ImageGallery = ({ input }) => {
     }
 
     return <React.Fragment>
-        <div className="section pt-8">
+        <div className="section pt-8 mb-5">
             <div className="container">
                 <div className="row">
                     <div data-wow-delay="0.3s" className="col-sm-12 wow fadeInUp">

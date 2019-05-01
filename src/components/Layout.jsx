@@ -4,9 +4,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import '@reach/skip-nav/styles.css'
+// import '@reach/skip-nav/styles.css'
 
-import Footer from './Footer'
 import SEO from './SEO'
 
 

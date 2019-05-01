@@ -1,3 +1,4 @@
+const bootstrap = require("./css/bootstrap.min.css")
 const font = require("./css/font-awesome.min.css")
 const stroke = require("./css/pe-icon-7-stroke.css")
 const pretty = require("./css/prettyPhoto.css")
@@ -332,6 +333,7 @@ exports.onRouteUpdate = () => {
     $('body').on('click', '#cms-menu-mobile', function () {
       var navigation = $(this).parent().parent().parent().parent().parent().parent().parent().parent().find('#cms-header-navigation');
       if (!navigation.hasClass('collapse')) {
+        console.log('collapse');
         navigation.addClass('collapse');
       } else {
         navigation.removeClass('collapse');
