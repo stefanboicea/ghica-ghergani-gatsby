@@ -8,92 +8,89 @@ exports.onInitialClientRender = () => {
 }
 
 exports.onRouteUpdate = () => {
-  jQuery(document).ready(function () {
-
-    if (jQuery('#rev_slider_1_1').show && jQuery('#rev_slider_1_1').show().revolution) {
-      
-
-      jQuery('#rev_slider_1_1').show().revolution({
-        dottedOverlay: "twoxtwo",
-        sliderType: "standard",
-        sliderLayout: "fullscreen",
-        dottedOverlay: "none",
-        delay: 9000,
-        navigation: {
-          keyboardNavigation: "off",
-          keyboard_direction: "horizontal",
-          mouseScrollNavigation: "off",
-          mouseScrollReverse: "default",
-          onHoverStop: "on",
-          touch: {
-            touchenabled: "on",
-            swipe_threshold: 75,
-            swipe_min_touches: 1,
-            swipe_direction: "horizontal",
-            drag_block_vertical: false
-          }
-          ,
-          arrows: {
-            style: "hebe",
-            enable: true,
-            hide_onmobile: true,
-            hide_under: 600,
-            hide_onleave: true,
-            hide_delay: 200,
-            hide_delay_mobile: 1200,
-            left: {
-              h_align: "left",
-              v_align: "center",
-              h_offset: 20,
-              v_offset: 0
-            },
-            right: {
-              h_align: "right",
-              v_align: "center",
-              h_offset: 20,
-              v_offset: 0
-            }
-          }
-        },
-        responsiveLevels: [1240, 1024, 778, 480],
-        visibilityLevels: [1240, 1024, 778, 480],
-        gridwidth: [1920, 1024, 778, 480],
-        gridheight: [700, 700, 700, 700],
-        lazyType: "none",
-        shadow: 0,
-        spinner: "spinner3",
-        stopLoop: "off",
-        stopAfterLoops: -1,
-        stopAtSlide: -1,
-        shuffle: "off",
-        autoHeight: "off",
-        fullScreenAutoWidth: "off",
-        fullScreenAlignForce: "off",
-        fullScreenOffsetContainer: "",
-        fullScreenOffset: "",
-        hideThumbsOnMobile: "off",
-        hideSliderAtLimit: 0,
-        hideCaptionAtLimit: 0,
-        hideAllCaptionAtLilmit: 0,
-        debugMode: false,
-        fallbacks: {
-          simplifyAll: "off",
-          nextSlideOnWindowFocus: "off",
-          disableFocusListener: false,
-        }
-      });
-    }
-  });	/*ready*/
-
-
+  console.log('route update');
   jQuery(document).ready(function ($) {
     "use strict";
+
+
+    jQuery('#rev_slider_1_1').show().revolution({
+      dottedOverlay: "twoxtwo",
+      sliderType: "standard",
+      sliderLayout: "fullscreen",
+      dottedOverlay: "none",
+      delay: 9000,
+      navigation: {
+        keyboardNavigation: "off",
+        keyboard_direction: "horizontal",
+        mouseScrollNavigation: "off",
+        mouseScrollReverse: "default",
+        onHoverStop: "on",
+        touch: {
+          touchenabled: "on",
+          swipe_threshold: 75,
+          swipe_min_touches: 1,
+          swipe_direction: "horizontal",
+          drag_block_vertical: false
+        }
+        ,
+        arrows: {
+          style: "hebe",
+          enable: true,
+          hide_onmobile: true,
+          hide_under: 600,
+          hide_onleave: true,
+          hide_delay: 200,
+          hide_delay_mobile: 1200,
+          left: {
+            h_align: "left",
+            v_align: "center",
+            h_offset: 20,
+            v_offset: 0
+          },
+          right: {
+            h_align: "right",
+            v_align: "center",
+            h_offset: 20,
+            v_offset: 0
+          }
+        }
+      },
+      responsiveLevels: [1240, 1024, 778, 480],
+      visibilityLevels: [1240, 1024, 778, 480],
+      gridwidth: [1920, 1024, 778, 480],
+      gridheight: [700, 700, 700, 700],
+      lazyType: "none",
+      shadow: 0,
+      spinner: "spinner3",
+      stopLoop: "off",
+      stopAfterLoops: -1,
+      stopAtSlide: -1,
+      shuffle: "off",
+      autoHeight: "off",
+      fullScreenAutoWidth: "off",
+      fullScreenAlignForce: "off",
+      fullScreenOffsetContainer: "",
+      fullScreenOffset: "",
+      hideThumbsOnMobile: "off",
+      hideSliderAtLimit: 0,
+      hideCaptionAtLimit: 0,
+      hideAllCaptionAtLilmit: 0,
+      debugMode: false,
+      fallbacks: {
+        simplifyAll: "off",
+        nextSlideOnWindowFocus: "off",
+        disableFocusListener: false,
+      }
+    });
+
+    
     /* pretty photo */
-    $(document).ready(function () {
-      $("a[data-rel^='prettyPhoto']").prettyPhoto();
-      $("a.prettyphoto").prettyPhoto();
-      $("a[data-rel^='prettyPhoto']").prettyPhoto({ hook: "data-rel", social_tools: !1, theme: "pp_default", horizontal_padding: 20, opacity: .8, deeplinking: !1 });
-    })
+
+    
+    $("a[data-rel^='prettyPhoto']").prettyPhoto();
+    $("a.prettyphoto").prettyPhoto();
+    $("a[data-rel^='prettyPhoto']").prettyPhoto({ hook: "data-rel", social_tools: !1, theme: "pp_default", horizontal_padding: 20, opacity: .8, deeplinking: !1 });
+
     var back_to_top = '1';
     var header_type = 'ontop';
     var menu_sticky_tablets = "";
@@ -143,38 +140,38 @@ exports.onRouteUpdate = () => {
     /**
      * window load event.
      */
+    
 
+      $(".noo-spinner").remove();
+      $("#cms-page").css("opacity", "1");
 
-    $(".noo-spinner").remove();
-    $("#cms-page").css("opacity", "1");
+      /** current scroll */
+      scroll_top = $(window).scrollTop();
 
-    /** current scroll */
-    scroll_top = $(window).scrollTop();
+      /** current window width */
+      window_width = $(window).width();
 
-    /** current window width */
-    window_width = $(window).width();
+      /** current window height */
+      window_height = $(window).height();
 
-    /** current window height */
-    window_height = $(window).height();
+      /* get Header height */
+      header_top = header.length > 0 ? header.outerHeight(true) : 0;
 
-    /* get Header height */
-    header_top = header.length > 0 ? header.outerHeight(true) : 0;
+      /* check sticky menu. */
+      if (menu_sticky == '1') {
+        cms_stiky_menu(scroll_top);
+      }
 
-    /* check sticky menu. */
-    if (menu_sticky == '1') {
-      cms_stiky_menu(scroll_top);
-    }
+      /* check mobile menu */
+      cms_mobile_menu();
 
-    /* check mobile menu */
-    cms_mobile_menu();
-
-    /* check back to top */
-    if (back_to_top == '1') {
-      /* add html. */
-      $('body').append('<div id="back_to_top" class="back_to_top"><span class="go_up"><i style="" class="fa fa-arrow-up"></i></span></div><!-- #back-to-top -->');
-      cms_back_to_top();
-    }
-
+      /* check back to top */
+      if (back_to_top == '1') {
+        /* add html. */
+        $('body').append('<div id="back_to_top" class="back_to_top"><span class="go_up"><i style="" class="fa fa-arrow-up"></i></span></div><!-- #back-to-top -->');
+        cms_back_to_top();
+      }
+    
 
     /**
      * reload event.
