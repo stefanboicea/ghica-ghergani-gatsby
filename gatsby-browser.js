@@ -1,3 +1,10 @@
+// import "./css/bootstrap.min.css";
+require("./css/font-awesome.min.css")
+require("./css/pe-icon-7-stroke.css")
+require( "./css/prettyPhoto.css")
+require( "./css/main.css")
+require( "./css/custom.css")
+
 exports.onInitialClientRender = () => {
   // dirty fix for missing popstate listener
   const GATSBY_NAVIGATE = window.___navigate || {}
