@@ -10,7 +10,7 @@ const QuoteNoDesctiption = ({ input }) => (
           {input.primary.quote_text}
         </div>
         <div className="text-center">
-          <img width="133" height="28" src="../images/assets/icon-under-title.png"  />
+          <img width="133" height="28" src={'../images/assets/icon-under-title.png'}  />
         </div>
         
       </div>
