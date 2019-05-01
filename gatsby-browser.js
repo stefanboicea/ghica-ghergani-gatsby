@@ -18,7 +18,32 @@ exports.onRouteUpdate = () => {
     "use strict";
 
 
-    jQuery('#rev_slider_1_1').show().revolution({
+    jQuery('#rev_slider_1_1').show().revolution(
+      {
+    //           lazyType: "none",
+    //   shadow: 0,
+    //   spinner: "spinner3",
+    //   stopLoop: "off",
+    //   stopAfterLoops: -1,
+    //   stopAtSlide: -1,
+    //   shuffle: "off",
+    //   autoHeight: "off",
+    //   fullScreenAutoWidth: "off",
+    //   fullScreenAlignForce: "off",
+    //   fullScreenOffsetContainer: "",
+    //   fullScreenOffset: "",
+    //   hideThumbsOnMobile: "off",
+    //   hideSliderAtLimit: 0,
+    //   hideCaptionAtLimit: 0,
+    //   hideAllCaptionAtLilmit: 0,
+    //   debugMode: false,
+    //         dottedOverlay: "twoxtwo",
+    //   sliderType: "standard",
+    //   sliderLayout: "fullscreen",
+    //   dottedOverlay: "none",
+    //     delay: 4000,
+    //   }
+    // );
       dottedOverlay: "twoxtwo",
       sliderType: "standard",
       sliderLayout: "fullscreen",
