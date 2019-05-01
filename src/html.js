@@ -10,8 +10,7 @@ export default function HTML(props) {
         {/* <link rel="shortcut icon" href="../images/favicon.ico" /> */}
         {/* <title>Monaco – Beautiful Vintage Multi-Concept Theme | Audio Post</title> */}
 
-        {/* <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' /> */}
-        <link rel='stylesheet' href={'/css/bootstrap.min.css'} type='text/css' media='all' />
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
 
         {/* HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries */}
         {/* WARNING: Respond.js doesn't work if you view the page via file:// */}
@@ -59,9 +58,7 @@ export default function HTML(props) {
         <script type='text/javascript' src={'/js/extensions/revolution.extension.navigation.min.js'}></script>
         <script type='text/javascript' src={'/js/extensions/revolution.extension.migration.min.js'}></script>
         <script type='text/javascript' src={'/js/extensions/revolution.extension.parallax.min.js'}></script>
-
         <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
-        <script type='text/javascript' src={'/js/main.js'}></script>
         {props.postBodyComponents}
       </body>
     </html>
