@@ -4,7 +4,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-// import '@reach/skip-nav/styles.css'
+ import '@reach/skip-nav/styles.css'
 
 import SEO from './SEO'
 
@@ -13,12 +13,12 @@ const PureLayout = ({ children, data, customSEO }) => (
   <>
     {!customSEO && <SEO />}
     <React.Fragment>
-      {/* <div className="noo-spinner">
+      <div className="noo-spinner">
         <div className="spinner">
           <div className="child double-bounce1"></div>
           <div className="child double-bounce2"></div>
         </div>
-      </div> */}
+      </div>
       <div id="cms-page" className="cs-wide header-default header-ontop clearfix">
         <div id="cms-header-wrapper" className="clearfix">
           <header id="masthead" className="site-header header-default header-ontop clearfix">
