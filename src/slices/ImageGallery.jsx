@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 const ImageGallery = ({ input }) => {
     let items = []
-    let sortedItems = input.items.sort((a,b)=> a.sort_order < b.sort_order)
+    let sortedItems = input.items.sort((a,b)=> a.sort_order - b.sort_order)
+    console.log(sortedItems)
     
     // for (const [index, item] of sortedItems.entries()) {
         for(let index=0;index<sortedItems.length;index++) {
@@ -42,8 +43,8 @@ const ImageGallery = ({ input }) => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-                        <div className="cms-grid-wraper cms-grid-masonry">
-                            <div className="row cms-grid cms-grid-masonry">
+                        <div className="cms-grid-wraper">
+                            <div className="row cms-grid cms-grid-masonry" >
                                 {items}
                             </div>
                         </div>

@@ -91,6 +91,30 @@ exports.onRouteUpdate = () => {
       }
     });
 
+    jQuery('.cms-grid-masonry').each(function(){
+      let $this = jQuery(this);
+     let $filter = $this.parent().find('.cms-grid-filter');
+      $this.imagesLoaded(function(){
+        console.log('loaded');
+        $this.shuffle({
+          itemSelector:'.cms-grid-item',
+      });
+      });
+     if($filter){
+       $filter.find('a').on('click',function(e){
+         e.preventDefault();
+         // set active class
+         $filter.find('a').removeClass('active');
+         jQuery(this).addClass('active');
+              
+         // get group name from clicked item
+         var groupName = $(this).attr('data-group');
+         // reshuffle grid
+         jQuery(this).parent().parent().parent().parent().find('.cms-grid-masonry').shuffle('shuffle', groupName );
+       });
+     }
+  });  
+
 
     /* pretty photo */
 
