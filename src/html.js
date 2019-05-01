@@ -42,7 +42,6 @@ export default function HTML(props) {
         <script type='text/javascript' src={'/js/jquery.themepunch.revolution.min.js'}></script>
         <script type='text/javascript' src={'/js/wow.min.js'}></script>
         <script type='text/javascript' src={'/js/jquery.parallax-1.1.3.js'}></script>
-        <script type='text/javascript' src={'/js/mobile-menu.js'}></script>
         <script type='text/javascript' src={'/js/jquery.prettyPhoto.js'}></script>
         <script type='text/javascript' src={'/js/waypoints.min.js'}></script>
         <script type='text/javascript' src={'/js/modernizr.min.js'}></script>
