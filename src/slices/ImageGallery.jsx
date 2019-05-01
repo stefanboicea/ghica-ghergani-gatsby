@@ -3,9 +3,13 @@ import PropTypes from 'prop-types'
 
 const ImageGallery = ({ input }) => {
     let items = []
-    for (const [index, item] of input.items.entries()) {
+    let sortedItems = input.items.sort((a,b)=> a.sort_order < b.sort_order)
+    
+    // for (const [index, item] of sortedItems.entries()) {
+        for(let index=0;index<sortedItems.length;index++) {
+            let item = sortedItems[index]
         items.push(
-            <div className="text-center cms-grid-item col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index}>
+            <div className="text-center cms-grid-item col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index} sort={item.sort_order}>
                 <div className="cms-grid-content overlay-wrap">
                     <img width="835" height="565" src={item.image.url} alt="" />
                     <div className="overlay">

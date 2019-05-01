@@ -109,6 +109,7 @@ export const pageQuery = graphql`
 							}
 						}
 						items {
+							sort_order
 							image_description {
 								text
 							}
