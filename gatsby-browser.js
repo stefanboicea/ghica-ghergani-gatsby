@@ -3,6 +3,7 @@ const stroke = require("./css/pe-icon-7-stroke.css")
 const pretty = require("./css/prettyPhoto.css")
 const main = require("./css/main.css")
 const custom = require("./css/custom.css")
+const animate = require("./css/animate.min.css")
 const settings = require("./css/settings.css")
 
 exports.onInitialClientRender = () => {
