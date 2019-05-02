@@ -15,7 +15,11 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 	let categories = false
 	if (data.categories[0].category) {
 		categories = data.categories.map(c => c.category.document[0].data.name)
-	}
+  }
+  
+  let coverVideo = <iframe width="1170" height="790" src={prismicPost.data.cover_video ? prismicPost.data.cover_video.url : ''} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	let coverImage = <img width="1170" height="790" src={prismicPost.data.coverimage ? prismicPost.data.coverimage.url : ''} alt="" />
+
 	return (
 		<Layout customSEO>
 			<SEO
@@ -27,11 +31,11 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 			/>
 			<React.Fragment>
 				<div id="main" className="main clearfix">
-					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(../images/background/background_1920x400.jpg) !important' }}>
+					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(/images/background/background_1920x400.jpg) !important' }}>
 						<div className="container">
 							<div className="row">
 								<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-									<h1>Standard Post</h1>
+									<h1>Noutati</h1>
 								</div>
 							</div>
 						</div>
@@ -44,10 +48,10 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 									<div className="single-post">
 										<article>
 											<div className="entry-media">
-												<img width="1170" height="790" src={prismicPost.data.coverimage.url} alt="" />
+                      {prismicPost.data.post_type === 'video' ? coverVideo : coverImage}
 											</div>
 											<div className="entry-header">
-												<h2 className="entry-title">Standard Post</h2>
+												<h2 className="entry-title">{prismicPost.data.title.text}</h2>
 												<div className="entry-meta cms-meta">
 													<ul className="list-unstyled list-inline">
 														<li className="detail-date"><a href="#">{prismicPost.data.date}</a></li>
@@ -59,7 +63,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 											<SliceZone allSlices={data.body} />
 
 											</div>
-											<div className="entry-footer clearfix">
+											{/* <div className="entry-footer clearfix">
 												<span className="post-share-title left">
 													<span className="h6"><i className="pe-7s-share"></i> Share</span>
 													<span className="post-share">
@@ -70,7 +74,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 														<a target="_blank" href="#"><i className="fa fa-linkedin"></i></a>
 													</span>
 												</span>
-											</div>
+											</div> */}
 										</article>
 									</div>
 								</div>
@@ -102,6 +106,10 @@ export const pageQuery = graphql`
       first_publication_date
       last_publication_date
       data {
+        post_type
+        cover_video {
+          url
+        }
         title {
           text
         }

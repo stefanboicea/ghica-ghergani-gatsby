@@ -9,8 +9,9 @@ const Content = styled.div`
 `
 
 const Image = ({ input }) =>{
-  return  <img src={input.primary.image.url} ></img>
-  
+  return <Content>
+  <img src={input.primary.image.url} ></img>
+  </Content> 
 
   }
 
