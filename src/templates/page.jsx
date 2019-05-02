@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, SliceZone, SEO } from '../components'
+import { Layout, SliceZone, SEO,LatestPosts } from '../components'
 
 import website from '../../config/website'
 
@@ -12,6 +12,7 @@ import website from '../../config/website'
 const Page = ({ data: { prismicPage, posts }, location }) => {
 	const { data } = prismicPage
 
+	 
 
 	return (
 		<Layout customSEO>
@@ -37,6 +38,8 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
 					<div className="section">
 						<div className="container-fluid">
 							<SliceZone allSlices={data.page_content} />
+							<LatestPosts data={posts} />
+
 						</div>
 					</div>
 				</div>
@@ -205,6 +208,36 @@ export const pageQuery = graphql`
 				}
 			}
 		}
+		posts: allPrismicPost(limit: 3,sort: {fields: [data___date], order: DESC}) {
+			edges {
+			  node {
+				uid
+				data {
+				  post_type
+				  cover_video {
+					url
+				  }
+				  title {
+					text
+				  }
+				  coverimage {
+					url
+				  }
+				  description
+				  date(formatString: "DD.MM.YYYY")
+				  categories {
+					category {
+					  document {
+						data {
+						  name
+						}
+					  }
+					}
+				  }
+				}
+			  }
+			}
+		  }
   }
 `
 
