@@ -134,7 +134,7 @@ class Contact extends Component {
 
 									<div className="row">
 										<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<input type="submit" value="Send Message" id="send_message" />
+											<button type="submit"  id="send_message" > Trimite</button>
 										</div>
 									</div>
 								</form>
