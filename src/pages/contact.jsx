@@ -103,39 +103,38 @@ class Contact extends Component {
 						<div className="row">
 							<div data-wow-delay="0.3s" className="col-sm-5 pt-10 wow fadeInLeft">
 								<h1 className="text-center">Contact</h1>
-								<p className="desc">Send a message</p>
+								<p className="desc">Trimiteti un mesaj</p>
 							</div>
 							<div data-wow-delay="0.3s" className="col-sm-7 wow fadeInRight">
-								<form className="contact-form">
+								<form className="contact-form" action="/" id="contact-form"  data-netlify="true" method="post">
+								<input type="hidden" name="form-name" value="contact-form" />
 									<div className="row">
 										<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 											<div className="your-name">
-												<input type="text" name="your-name" value="" placeholder="Name" />
+												<input type="text" name="your-name"  id="name" placeholder="Name" />
 											</div>
 										</div>
 										<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-											<div className="your-phone">
-												<input type="text" name="your-phone" value="" placeholder="Phone" />
+										<div className="your-email">
+												<input type="email" name="your-email" id="email" placeholder="Email" />
 											</div>
 										</div>
 									</div>
-									<div className="row">
-										<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<div className="your-email">
-												<input type="email" name="your-email" value="" placeholder="Email" />
-											</div>
-										</div>
-									</div>
+								
 									<div className="row">
 										<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div className="your-message">
-												<textarea name="your-message" cols="40" rows="10">Message</textarea>
+												<textarea name="your-message" cols="40" id ="message" rows="10" placeholder="Mesaj"></textarea>
 											</div>
 										</div>
 									</div>
+									<div id="mail_success" className="row" style={{display:'none'}}>
+                                                Mesajul a fost trimis cu succes.
+                        </div>
+
 									<div className="row">
 										<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-											<input type="submit" value="Send Message" />
+											<input type="submit" value="Send Message" id="send_message" />
 										</div>
 									</div>
 								</form>
