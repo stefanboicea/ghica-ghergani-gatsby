@@ -386,7 +386,6 @@ exports.onRouteUpdate = () => {
     $('body').on('click', '#cms-menu-mobile', function () {
       var navigation = $(this).parent().parent().parent().parent().parent().parent().parent().parent().find('#cms-header-navigation');
       if (!navigation.hasClass('collapse')) {
-        console.log('collapse');
         navigation.addClass('collapse');
       } else {
         navigation.removeClass('collapse');
@@ -620,7 +619,6 @@ exports.onRouteUpdate = () => {
           live: true        // default
         }
       );
-      console.log('animation');
       wow.init();
     }
 

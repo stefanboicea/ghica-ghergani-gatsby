@@ -32,8 +32,8 @@ const ImageGallery = ({ input }) => {
             <div className="container">
                 <div className="row">
                     <div data-wow-delay="0.3s" className="col-sm-12 wow fadeInUp">
-                        <h1 className="text-center">OUR PORTFOLIO</h1>
-                        <p className="desc">Check out our recent works</p>
+                        <h1 className="text-center">{input.primary.gallery_title.text}</h1>
+                        {/* <p className="desc">Check out our recent works</p> */}
                     </div>
                 </div>
             </div>

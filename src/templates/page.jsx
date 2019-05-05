@@ -35,13 +35,15 @@ const Page = ({ data: { prismicPage, posts }, location }) => {
 							</div>
 						</div>
 					</div>}
-					<div className="section">
-						<div className="container-fluid">
-							<SliceZone allSlices={data.page_content} />
+
+					<SliceZone allSlices={data.page_content} />
 							<LatestPosts data={posts} />
+					{/* <div className="section">
+						<div className="container-fluid">
+						
 
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</React.Fragment>
 		</Layout>
