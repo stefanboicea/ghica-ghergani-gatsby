@@ -49,7 +49,7 @@ const PureLayout = ({ children, data, customSEO }) => (
                             <a href={'/despre'}>Despre noi</a>
                           </li>
                           <li>
-                            <a href={'/servicii'}>Servicii</a>
+                            <a href={'/activitati'}>Activitati</a>
                           </li>
                           <li >
                             <a href={'/blog'}>Blog</a>
