@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const BannerGallery = ({ input }) => {
+    console.log(input)
     let items = []
     for (const [index, item] of input.items.entries()) {
         items.push(
@@ -26,9 +27,9 @@ const BannerGallery = ({ input }) => {
                     data-splitout="none"
                     data-responsive_offset="on"
                     data-end="8600">
-                    Far far away, behind the word mountains, far from the countries Vokalia and <br />Consonantia, there live the blind texts. Separated they live.
+                    {item.image_description.text}
                         </div>
-                <div className="tp-caption primary-button tp-resizeme"
+                {/* <div className="tp-caption primary-button tp-resizeme"
                     data-x="['center','center','center','center']"
                     data-hoffset="['0','0','0','0']"
                     data-y="['center','center','center','center']"
@@ -45,7 +46,7 @@ const BannerGallery = ({ input }) => {
                     data-responsive_offset="on"
                     data-end="8600">
                     <a href='#'>PURCHASE THEME</a>
-                </div>
+                </div> */}
             </li>
         )
     }
