@@ -175,38 +175,7 @@ export const pageQuery = graphql`
 							}
 						}
 					}
-					... on PrismicPagePageContentClients {
-						slice_type
-						id
-						items {
-							full_name {
-								text
-							}
-							portrait {
-								url
-							}
-						}
-					} 
-					 ... on PrismicPagePageContentTeam {
-						slice_type
-						id
-						primary {
-							team_section {
-								text
-							}
-						}
-						items {
-							first_and_lastname {
-								text
-							}
-							position {
-								text
-							}
-							portrait {
-								url
-							}
-						}
-					}
+				
 				}
 			}
 		}
@@ -243,3 +212,35 @@ export const pageQuery = graphql`
   }
 `
 
+// ... on PrismicPagePageContentClients {
+// 	slice_type
+// 	id
+// 	items {
+// 		full_name {
+// 			text
+// 		}
+// 		portrait {
+// 			url
+// 		}
+// 	}
+// } 
+//  ... on PrismicPagePageContentTeam {
+// 	slice_type
+// 	id
+// 	primary {
+// 		team_section {
+// 			text
+// 		}
+// 	}
+// 	items {
+// 		first_and_lastname {
+// 			text
+// 		}
+// 		position {
+// 			text
+// 		}
+// 		portrait {
+// 			url
+// 		}
+// 	}
+// }
