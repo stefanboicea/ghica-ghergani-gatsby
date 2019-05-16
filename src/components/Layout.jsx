@@ -51,6 +51,9 @@ const PureLayout = ({ children, data, customSEO }) => (
                           <li>
                             <a href={'/activitati'}>Activitati</a>
                           </li>
+                          <li>
+                            <a href={'/istoria'}>Istoria</a>
+                          </li>
                           <li >
                             <a href={'/blog'}>Blog</a>
                           </li>
@@ -72,10 +75,11 @@ const PureLayout = ({ children, data, customSEO }) => (
             <div className="footer-social footer-bottom-3">
               <div className="container">
                 <div className="cms-social-sc">
-                  <a href="#" className="fa fa-facebook" title="Facebook"></a>
-                  <a href="#" className="fa fa-twitter" title="Twitter"></a>
-                  <a href="#" className="fa fa-instagram" title="Instagram"></a>
-                  <a href="#" className="fa fa-behance" title="Behance"></a>
+                  <a href="https://www.facebook.com/DomeniulIonGhica" className="fa fa-facebook" title="Facebook"></a>
+                  {/* <a href="#" className="fa fa-twitter" title="Twitter"></a> */}
+                  <a href="https://www.instagram.com/domeniulghica" className="fa fa-instagram" title="Instagram"></a>
+                  <a href="https://www.youtube.com/channel/UCRh4g0wMlrXNWXmVgi9-03w" className="fa fa-youtube" title="Youtube"></a>
+                  {/* <a href="#" className="fa fa-behance" title="Behance"></a> */}
                 </div>
               </div>
             </div>
