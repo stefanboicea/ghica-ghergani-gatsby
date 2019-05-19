@@ -21,7 +21,6 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       siteLanguage,
       ogLanguage,
       author,
-      twitter,
       facebook,
     },
   } = site
@@ -164,7 +163,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
         locale={ogLanguage}
         name={facebook}
       />
-      <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
+      {/* <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} /> */}
     </>
   )
 }

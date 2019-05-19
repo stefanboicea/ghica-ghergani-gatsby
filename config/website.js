@@ -6,11 +6,11 @@ module.exports = {
   headline: 'Domeniul Ghica Ghergani', // Headline for schema.org JSONLD
   url: 'https://ghica-ghergani.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'ro', // Language Tag on <html> element
-  logo: '/images/logo.png', // Used for SEO
+  logo: 'src/favicon.png', // Used for SEO
   ogLanguage: 'ro_RO', // Facebook Language
 
   // JSONLD / Manifest
-  favicon: 'src/images/logo.png', // Used for manifest favicon generation
+  favicon: 'src/favicon.png', // Used for manifest favicon generation
   shortName: 'Domeniul Ghergani', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Domeniul Ghergani', // Author for schemaORGJSONLD
   themeColor: '#3D63AE',
