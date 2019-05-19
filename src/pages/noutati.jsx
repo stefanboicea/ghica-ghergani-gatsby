@@ -26,7 +26,7 @@ class Blog extends Component {
 		let items = []
 		for (const [index, item] of postList.entries()) {
 			const post = item.node
-			const link = '/blog/' + post.uid
+			const link = '/noutati/' + post.uid
 			let coverVideo = <iframe width="940" height="529" src={post.data.cover_video ? post.data.cover_video.url : ''} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			let coverImage = <img width="1000" height="676" src={post.data.coverimage ? post.data.coverimage.url : ''} alt="" />
 			

@@ -103,7 +103,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // The uid you assigned in Prismic is the slug!
     createPage({
-      path: `/blog/${edge.node.uid}`,
+      path: `/noutati/${edge.node.uid}`,
       component: postTemplate,
       context: {
         // Pass the unique ID (uid) through context so the template can filter by it
@@ -112,15 +112,15 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const categoryList = Array.from(categorySet)
+  // const categoryList = Array.from(categorySet)
 
-  categoryList.forEach(category => {
-    createPage({
-      path: `/blog/categorii/${_.kebabCase(category)}`,
-      component: categoryTemplate,
-      context: {
-        category,
-      },
-    })
-  })
+  // categoryList.forEach(category => {
+  //   createPage({
+  //     path: `/blog/categorii/${_.kebabCase(category)}`,
+  //     component: categoryTemplate,
+  //     context: {
+  //       category,
+  //     },
+  //   })
+  // })
 }

@@ -6,7 +6,7 @@ import { Layout, Listing, Wrapper, SliceZone, Title, SEO, Header } from '../comp
 import Categories from '../components/Listing/Categories'
 import website from '../../config/website'
 import Img from 'gatsby-image'
-
+import Background from '../../images/background/background_1920x400.jpg';
 
 const PostWrapper = styled.div
 
@@ -31,7 +31,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
 			/>
 			<React.Fragment>
 				<div id="main" className="main clearfix">
-					<div id="page-title" className="page-title" style={{ backgroundImage: 'url(/images/background/background_1920x400.jpg) !important' }}>
+					<div id="page-title" className="page-title" style={{ backgroundImage:`url(${Background})` }}>
 						<div className="container">
 							<div className="row">
 								<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
