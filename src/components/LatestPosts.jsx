@@ -10,7 +10,7 @@ export default class LatestPosts extends Component {
 		for (const [index, edge] of data.edges.entries()) {
             const item = edge.node.data
             const post = edge.node
-            const link = '/blog/' + edge.node.uid
+            const link = '/noutati/' + edge.node.uid
 
             let coverVideo = <iframe width="370" height="250" src={post.data.cover_video ? post.data.cover_video.url : ''} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 			let coverImage = <img width="370" height="250" src={post.data.coverimage ? post.data.coverimage.url : ''} alt="" />
