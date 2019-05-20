@@ -104,19 +104,19 @@ Accesul la Domeniul Ion Ghica se face din Strada Ion Ghica din cartierul Ghergan
 														<h4>Despre acces</h4>
 														<div className="fancy-box-content">
 															<p>
- 
- Pentru a va veni in intampinare, va trimitem cateva detalii referitoare la cum se ajunge la Ghergani.
-	
- Domeniul Ghica se afla pe Strada Ion Ghica, in cartierul Ghergani din centrul orașului Răcari, judetul Dambovita, pe drumul care leaga Bucuresti de Targoviste.
- Drumul din Bucuresti la Ghergani dureaza aproximativ 30-40 de minute.
-	
- Din Bucuresti se poate iesi prin cartierul Chitila.
- Se trece pe sub Podul Constanta, dupa care, la stanga, sa mergeti pe Soseaua Chitila care va fi semnalizata printr-un indicator rutier.
- Se trece pe sub podul Soselei de Centura, unde se afla un sens giratoriu, din care va indreptati spre Chitila.
- Mentineti drumul spre Targoviste la bifurcatia care va aparea la iesirea din Baldana.
- Cand ajungeti in orasul Racari, mergeti inainte, spre centru. Ca puncte de reper sunt Primaria si farmacia care se afla pe dreapta.
- Dupa aproximativ 1,5 km veti trece peste un pod peste raul Ilfovăț.
- Din indepartare veti putea vedea parcul Domeniului cu arbori inalti.
+
+																Pentru a va veni in intampinare, va trimitem cateva detalii referitoare la cum se ajunge la Ghergani.
+															 
+																Domeniul Ghica se afla pe Strada Ion Ghica, in cartierul Ghergani din centrul orașului Răcari, judetul Dambovita, pe drumul care leaga Bucuresti de Targoviste.
+																Drumul din Bucuresti la Ghergani dureaza aproximativ 30-40 de minute.
+															 
+																Din Bucuresti se poate iesi prin cartierul Chitila.
+																Se trece pe sub Podul Constanta, dupa care, la stanga, sa mergeti pe Soseaua Chitila care va fi semnalizata printr-un indicator rutier.
+																Se trece pe sub podul Soselei de Centura, unde se afla un sens giratoriu, din care va indreptati spre Chitila.
+																Mentineti drumul spre Targoviste la bifurcatia care va aparea la iesirea din Baldana.
+																Cand ajungeti in orasul Racari, mergeti inainte, spre centru. Ca puncte de reper sunt Primaria si farmacia care se afla pe dreapta.
+																Dupa aproximativ 1,5 km veti trece peste un pod peste raul Ilfovăț.
+																Din indepartare veti putea vedea parcul Domeniului cu arbori inalti.
  Pe dreapta veti vedea zidul care imprejmuiește Domeniul, de culoare portocalie. Pe zid veți vedea și un semnalizator care va indica intrarea.</p>
 														</div>
 													</div>
@@ -125,7 +125,7 @@ Accesul la Domeniul Ion Ghica se face din Strada Ion Ghica din cartierul Ghergan
 										</div>
 									</div>
 
-								
+
 								</div>
 							</div>
 
