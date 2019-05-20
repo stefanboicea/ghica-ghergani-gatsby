@@ -21,7 +21,7 @@ class Contact extends Component {
 						<div className="row">
 							<div id="page-title-text" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
 								<h1>Contactati-ne</h1>
-								<div className="page-sub-title">Drop us a line</div>
+								{/* <div className="page-sub-title">Drop us a line</div> */}
 							</div>
 						</div>
 					</div>
@@ -29,7 +29,7 @@ class Contact extends Component {
 				<div className="section mb-10">
 					<div className="container">
 						<div className="row">
-							<div data-wow-delay="0.3s" className="col-sm-4 pull-left wow fadeInUp">
+							<div data-wow-delay="0.3s" className="col-sm-8 pull-left wow fadeInUp">
 								<div className="cms-fancy-box-single">
 									<div className="cms-fancyboxes-body">
 										<div className="cms-fancybox-item">
@@ -39,16 +39,18 @@ class Contact extends Component {
 								                </div>
 								            </div>
                                     		<div className="fancy-box-content-wrap has-icon-image">
-                                    			<h4>OUR LOCATION</h4>
+                                    			<h4>Locatia</h4>
                                     			<div className="fancy-box-content">
-                                    				<p>14 Tottenham Court Road<br />London, England</p>
+                                    				<p>Domeniul de la Ghergani se află la o distanță de 40 de km de București, situându-se pe DN 71 (București – Târgoviște).
+Accesul la Domeniul Ion Ghica se face din Strada Ion Ghica din cartierul Ghergani, orașul Răcari, județul Dâmbovița.</p>
                                     			</div>
                                     		</div>
 								        </div>
 								    </div>
 								</div>
 							</div>
-							<div data-wow-delay="0.3s" className="col-sm-4 pull-left wow fadeInUp">
+
+							{/* <div data-wow-delay="0.3s" className="col-sm-4 pull-left wow fadeInUp">
 								<div className="cms-fancy-box-single">
 									<div className="cms-fancyboxes-body">
 										<div className="cms-fancybox-item">
@@ -86,10 +88,11 @@ class Contact extends Component {
 								    </div>
 								</div>
 							</div>
+					 */}
 						</div>
 					</div>
 				</div>
-				<div className="section mb-10">
+				{/* <div className="section mb-10">
 					<div className="container">
 						<div className="row">
 							<div data-wow-delay="0.3s" className="col-sm-12 wow fadeInUp">
@@ -97,7 +100,7 @@ class Contact extends Component {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 				<div className="section mb-10">
 					<div className="container">
 						<div className="row">
@@ -111,7 +114,7 @@ class Contact extends Component {
 									<div className="row">
 										<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 											<div className="your-name">
-												<input type="text" name="your-name"  id="name" placeholder="Name" />
+												<input type="text" name="your-name"  id="name" placeholder="Nume" />
 											</div>
 										</div>
 										<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
