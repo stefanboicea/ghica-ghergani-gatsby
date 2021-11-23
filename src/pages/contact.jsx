@@ -145,6 +145,9 @@ Accesul la Domeniul Ion Ghica se face din Strada Ion Ghica din cartierul Ghergan
 									<div data-wow-delay="0.3s" className="col-sm-5 pt-10 wow fadeInLeft">
 										<h1 className="text-center">Contact</h1>
 										<p className="desc">Trimiteti un mesaj</p>
+										<p className="text-center">
+										<a href="mailto:contact@domeniul-ghica.ro">contact@domeniul-ghica.ro</a>  
+											</p>
 									</div>
 									<div data-wow-delay="0.3s" className="col-sm-7 wow fadeInRight">
 										<form className="contact-form" action="/" id="contact-form" data-netlify="true" method="post">
